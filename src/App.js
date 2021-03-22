@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css"
+import Header from "./Header"
+import Proposed from "./Proposed"
+import Repertoire from "./Repertoire"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import Film from "./Film"
+
+class App extends Component{
+  
+  state = {
+    data: [],
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:8080/api/films/all')
+      .then(response => response.json())
+      .then(data => { 
+        console.log(data);
+        this.setState({ data })
+      }
+      );
+  }
+
+  render() {
+    return (
+    <div class="repertoire">
+        <Header />
+        {this.state.data.map(film => <Film info={film}/>)}
+        <Proposed />
+        <Repertoire />
     </div>
-  );
+    );
+  }
 }
 
 export default App;
+
+
+
+

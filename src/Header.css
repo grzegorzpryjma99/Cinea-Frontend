@@ -1,0 +1,17 @@
+.header{
+    background-color: #C4C4C4;
+    display: flex;
+    justify-content: space-between;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.check{
+    text-align: center;
+    
+}
+
+.loginAndRegister{
+    text-align: end;
+}
+
