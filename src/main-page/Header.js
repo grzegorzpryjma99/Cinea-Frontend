@@ -1,10 +1,23 @@
 import React from "react";
-import PropTypes from "prop-types";
-import CheckCinema from "./CheckCinema"
+import logo from './logo.svg'
 import "./Header.css"
-import { ReactComponent as Logo } from './logo.svg';
 import {FaUser} from "react-icons/fa"; 
+import {FaMapMarkerAlt} from "react-icons/fa"; 
 
+const Header = (props) => (
+  <header className="header">
+      <div>
+        <img src={logo} className="logo" alt="logo" />
+      </div>
+      <div className="checkCinema">
+            <i class="fas fa-map-marker-alt"></i>
+            <h><FaMapMarkerAlt />{props.location}</h>
+      </div>
+  </header>
+)
+
+export default Header;
+/*
 export default class Header extends React.Component {
 
   render() {
@@ -25,3 +38,4 @@ export default class Header extends React.Component {
     );
   }
 }
+*/
