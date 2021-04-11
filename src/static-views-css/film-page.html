@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet"> 
+<head>
+    <link rel="stylesheet" type= "text/css" href="film-page.css">
+    <title>Film-page</title>
+</head>
+
+<body>
+    <header class='haeder'>
+        <img class='logo' src="logo.svg" className="logo"/>
+        <input class='cinema-location' type="checkbox">
+        <div class='login-register-buttons'>
+            <button class='login-button' onClick={togglePanel}>logowanie</button>
+            <button class='register-button' onClick={togglePanel}>rejestracja</button>
+        </div>
+    </header>
+
+    <section>
+        <h1 class='title'>Tutuł filmu</h1>
+        <div class='container'>
+            <div class='photo'>
+                <img src="platak.svg"/>
+            </div>
+            <div class='details'>
+                <div class='data-time'>
+                    <div class='date'>
+                        <div class='data-icon'>
+                            placeholder
+                        </div>
+                        <div class="date-div">
+                            <p>Data premiery</p>
+                            <p>01.01.2020</p>
+                        </div>
+                    </div>
+                    <div class='time'>
+                        <div class='time-icon'>
+                            placeholder
+                        </div>
+                        <div class='time-div'>
+                            <p>Czas trwania</p>
+                            <p>1h 20min</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='description'>
+                    <p>tag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the primary page. Thetag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the primary page. Thetag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the primary page. Thetag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the primary page. The</p>
+                </div>
+                <button class='booking-button' onClick={}>Kup bilety</button>
+            </div>
+        </div>
+
+        <div>
+            <h1 class="title">Zobacz zwiastun</h1>
+            <div class='trailer'>
+                <img src='zwiastun.svg'>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class='about-us'>
+            <h1>O nas</h1>
+            <p>f the primary page. Thetag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the pri</p>
+        </div>
+        <div class='contact'>
+            <h2>Kontakt</h2>
+            <p>123456789</p>
+            <p>kino@gmail.com</p>
+        </div>
+        <div class='map' id="map"></div>
+    
+        
+    </footer>
+</body>

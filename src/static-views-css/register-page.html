@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type= "text/css" href="register-page.css">
+    <title>Register-page</title>
+</head>
+
+<body>
+    <section>
+        <img class='logo' src="logo.svg" className="logo"/>
+        <h1 class='register-header'>REJESTRACJA</h1>
+        <div class='container'>
+        <form  onSubmit>
+          
+          <input
+            id='email'
+            name='email'
+            type='email'
+            onChange={formik.handleChange}
+            value=email
+          />
+
+          <input
+            id='email'
+            name='email'
+            type='email'
+            onChange={formik.handleChange}
+            value='powtórz email'
+          />
+
+          <input
+            id='password'
+            name='password'
+            type='password'
+            onChange={formik.handleChange}
+            value=hasło
+          />
+
+          <input
+            id='password'
+            name='password'
+            type='password'
+            onChange={formik.handleChange}
+            value='haslo'
+          />
+
+          <input
+            id='name'
+            name='name'
+            type='name'
+            onChange={formik.handleChange}
+            value='imię'
+          />
+
+          <input
+            id='surname'
+            name='surname'
+            type='surname'
+            onChange={formik.handleChange}
+            value='nazwisko'
+          />
+
+          <input
+            id='phone'
+            name='phone'
+            type='phone'
+            onChange={formik.handleChange}
+            value='numer telefonu'
+          />
+
+          <input 
+            type="date" 
+            id="start" 
+            name="trip-start"
+            value="2020-07-22"
+            min="1920-01-01" 
+            max="2020-12-31"
+           />
+        
+          <button class='login-button' type='submit'>Zarejestruj się</button>
+        </form>
+
+        <button class='register-button' onClick={togglePanel}>Masz już konto?</button>
+        </div>
+    </section>
+</body>

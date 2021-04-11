@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type= "text/css" href="login-page.css">
+    <title>Login-page</title>
+</head>
+
+<body>
+    <section>
+        <img class='logo' src="logo.svg" className="logo"/>
+        
+        <div class='container'>
+        <form  onSubmit>
+          
+          <input
+            id='email'
+            name='email'
+            type='email'
+            onChange={formik.handleChange}
+            value=email
+          />
+
+          <input
+            id='password'
+            name='password'
+            type='password'
+            onChange={formik.handleChange}
+            value=haslo
+          />
+        
+          <button class='login-button' type='submit'>Zaloguj się</button>
+        </form>
+
+        <button class='register-button' onClick={togglePanel}>Zarejestruj się</button>
+        </div>
+    </section>
+</body>

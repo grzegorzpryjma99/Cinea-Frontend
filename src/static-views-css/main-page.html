@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet"> 
+<head>
+    <link rel="stylesheet" type= "text/css" href="main-page.css">
+    <title>Main-page</title>
+</head>
+
+<body>
+    <header class='haeder'>
+        <img class='logo' src="logo.svg" className="logo"/>
+        <input class='cinema-location' type="checkbox">
+        <div class='login-register-buttons'>
+            <button class='login-button' onClick={togglePanel}>logowanie</button>
+            <button class='register-button' onClick={togglePanel}>rejestracja</button>
+        </div>
+    </header>
+    <section>
+        <h1 class='recomended'>Polecane</h1>
+        <div class='recomended-films'>
+            <img src='platak.svg'>
+            <img src='platak.svg'>
+            <img src='platak.svg'>
+        </div>
+
+        <div class="repertoire">
+            <h1 class='repertuar'>Repertuar</h1>
+            <div class="repertoire-buttons">
+                <button class='monday' onClick={togglePanel}>Pn</button>
+                <button class='tuesday' onClick={togglePanel}>Wt</button>
+                <button class='wednesday' onClick={togglePanel}>Śr</button>
+                <button class='thurstday' onClick={togglePanel}>Cz</button>
+                <button class='friday' onClick={togglePanel}>Pt</button>
+                <button class='saturday' onClick={togglePanel}>Sob</button>
+                <button class='sunday' onClick={togglePanel}>Nd</button>
+            </div>
+        </div>
+        <div class='the-film'>
+            <div class='film-image'>
+                <img src='platak.svg'>
+            </div>
+            <div class='film-details'>
+                <h1>Tutuł filmu</h1>
+                <div class='time'>
+                    <button class='monday' onClick={togglePanel}>10:00</button>
+                    <button class='monday' onClick={togglePanel}>10:30</button>
+                    <button class='monday' onClick={togglePanel}>11:00</button>
+                </div>
+                <div class='short-description'>
+                    scribe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the primary page. Thetag is used to describe the main object of the web page in a shorter way like a highlighter. It b
+                </div>
+                <div class='operation-buttons'>
+                    <button class='monday' onClick={togglePanel}>Więcej</button>
+                    <button class='monday' onClick={togglePanel}>Rezerwuj bilety</button>
+                </div>
+            </div>
+        </div>
+        <div class='the-film'>
+            <div class='film-image'>
+                <img src='platak.svg'>
+            </div>
+            <div class='film-details'>
+                <h1>Tutuł filmu</h1>
+                <div class='time'>
+                    <button class='monday' onClick={togglePanel}>10:00</button>
+                    <button class='monday' onClick={togglePanel}>10:30</button>
+                    <button class='monday' onClick={togglePanel}>11:00</button>
+                </div>
+                <div class='short-description'>
+                    scribe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the primary page. Thetag is used to describe the main object of the web page in a shorter way like a highlighter. It b
+                </div>
+                <div class='operation-buttons'>
+                    <button class='monday' onClick={togglePanel}>Więcej</button>
+                    <button class='monday' onClick={togglePanel}>Rezerwuj bilety</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class='about-us'>
+            <h1>O nas</h1>
+            <p>f the primary page. Thetag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the pri</p>
+        </div>
+        <div class='contact'>
+            <h2>Kontakt</h2>
+            <p>123456789</p>
+            <p>kino@gmail.com</p>
+        </div>
+        <div class='map' id="map"></div>
+    
+        
+    </footer>
+</body>
