@@ -8,3 +8,6 @@ Cinema booking system. Web application for booking tickets at the cinema. Client
 * JavaScript
 * Redux
 * React
+
+## Check more
+https://github.com/grzegorzpryjma99/Cinea-Backend
