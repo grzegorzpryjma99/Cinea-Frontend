@@ -37,7 +37,6 @@ const Signin = () => {
   return (
     <section>
         <img src={logo} className="logo-login"/>
-        
         <div className='container-login'>
         <form  onSubmit={formik.handleSubmit}>
         <label htmlFor='email'></label>

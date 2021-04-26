@@ -13,7 +13,7 @@ const Routes = () => {
       <Route path='/signup' component={Signup} />
       <Route path='/logout' component={Logout} />
       <Route path='/main-page' component={MainPage} />
-      <Route path='/film' component={Film} />
+      <Route path='/film/:filmId' component={Film} />
     </Switch>
   );
 };

@@ -19,11 +19,11 @@ const Main = () =>  {
       };
 
     return (
-        <BrowserRouter>
+            <div>
             <Recomended />
             <Repertoire />
             <Switch>
-                <Route exec path='/main-page' component={Films}/>
+                <Route path='/main-page/pn' component={Films}/>
                 <Route path='/main-page/wt' component={Films}/>
                 <Route path='/main-page/sr' component={Films}/>
                 <Route path='/main-page/cz' component={Films}/>
@@ -31,7 +31,7 @@ const Main = () =>  {
                 <Route path='/main-page/sob' component={Films}/>
                 <Route path='/main-page/nd' component={Films}/>
             </Switch>
-        </BrowserRouter>
+       </div>
            
   );
 };

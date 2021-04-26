@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, useHistory } from "react-router-dom";
 import { useFormik } from "formik";
 import "./film-page.css"
@@ -12,11 +12,13 @@ import Main from "./Main";
 import { Route, NavLink, HashRouter} from "react-router-dom";
 import plakat from './platak.svg'
 
-const FilmsDetails = () => {
+const FilmsDetails = ({dane}) => {
 
+    //console.log(dane.title)
+   // console.log(dane.id)
   return (
     <section>
-    <h1 className='title'>Tutuł filmu</h1>
+    <h1 className='title'></h1>
     <div className='container-film'>
         <div className='photo'>
             <img src={plakat}/>
@@ -29,7 +31,7 @@ const FilmsDetails = () => {
                     </div>
                     <div className="date-div">
                         <p>Data premiery</p>
-                        <p>01.01.2020</p>
+                        <p>dsa</p>
                     </div>
                 </div>
                 <div className='time'>
@@ -38,12 +40,12 @@ const FilmsDetails = () => {
                     </div>
                     <div className='time-div'>
                         <p>Czas trwania</p>
-                        <p>1h 20min</p>
+                        <p>das</p>
                     </div>
                 </div>
             </div>
             <div className='description'>
-                <p>tag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the primary page. Thetag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the primary page. Thetag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the primary page. Thetag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the primary page. The</p>
+                <p>dsa</p>
             </div>
             <button className='booking-button'>Kup bilety</button>
         </div>

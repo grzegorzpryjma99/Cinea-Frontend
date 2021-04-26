@@ -15,12 +15,11 @@ import { Route, NavLink, HashRouter} from "react-router-dom";
 const MainPage = () => {
 
   return (
-      
-    <BrowserRouter>
-        <Header />
-        <Main />
-        <Footer />
-    </BrowserRouter>
+    <div>
+      <Header />
+      <Main />
+      <Footer />
+    </div>
   );
 };
 
