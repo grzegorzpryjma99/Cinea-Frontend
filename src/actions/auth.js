@@ -13,7 +13,6 @@ export const signin = (signinData) => async (dispatch) => {
                 type: SIGNIN,
                 payload: res.data.token
             })
-            //return <Redirect to='/signup' />;
         }else{
             dispatch({
                 type: SIGNIN_ERROR

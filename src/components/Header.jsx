@@ -8,17 +8,22 @@ import "./MainPage.css"
 
 const Header = () =>  {
 
-  const togglePanel = () => {
+  const history = useHistory();
 
+  const toRegister = () => {
+    history.push("/signup");
+  }
+
+  const toLogin = () => {
+    history.push("/");
   }
 
     return (
         <header className='haeder'>
         <img src={logo} className="logo"/>
-        <input className='cinema-location' type="checkbox"></input>
         <div className='login-register-buttons'>
-            <button className='login-button' onClick={togglePanel}>logowanie</button>
-            <button className='register-button' onClick={togglePanel}>rejestracja</button>
+            <button className='login-btn' onClick={toLogin}>logowanie</button>
+            <button className='register-btn' onClick={toRegister}>rejestracja</button>
         </div>
         </header>
   );
