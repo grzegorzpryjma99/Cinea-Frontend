@@ -5,6 +5,8 @@ import Signup from "../components/Signup.jsx";
 import Logout from "../components/Logout.jsx";
 import MainPage from "../components/MainPage.jsx";
 import Film from "../components/Film.jsx";
+import AddFilm from "../components/AddFilm.jsx";
+import AdminPanel from "../components/AdminPanel.jsx";
 
 const Routes = () => {
   return (
@@ -13,6 +15,8 @@ const Routes = () => {
       <Route path='/signup' component={Signup} />
       <Route path='/logout' component={Logout} />
       <Route path='/main-page' component={MainPage} />
+      <Route path='/addFilm' component={AddFilm} />
+      <Route path='/adminPanel' component={AdminPanel} />
       <Route path='/film/:filmId' component={Film} />
     </Switch>
   );

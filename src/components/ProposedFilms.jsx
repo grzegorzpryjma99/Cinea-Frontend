@@ -41,7 +41,7 @@ class ProposedFilms extends Component {
 
         const filmList = this.state.data && this.state.data.map(film => {
             return(
-                <NavLink to="/film/1"> 
+                <NavLink to={`/film/${film.id}`}>  
                 <div key={film.id}>
                     <div>{film.filmDetails.title}</div>
                     <img src={plakat}></img>
