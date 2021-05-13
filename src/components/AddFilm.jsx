@@ -1,7 +1,7 @@
 import React , { useState }from "react";
 import { useFormik } from "formik";
 import { useDispatch, useSelector} from "react-redux";
-
+import axios from 'axios';
 
 const AddFilm = () => {
  
@@ -18,18 +18,23 @@ const AddFilm = () => {
           time: "",
           releaseDate: "",
         },
-        onSubmit: (values, {resetForm}) => {
+        onSubmit: (values, {resetForm}) =>  {
+
           const form = {
             filmDetails:{
                 category: values.category,
                 title: values.title,
                 description: values.description,
-                trailer: values.link,
+                trailer: values.trailer,
                 time: values.time,
                 releaseDate: values.date,
           }
           };
-          console.log(form)
+          const xd = JSON.stringify(form)
+          console.log(xd)
+          const res = axios.post(`http://localhost:8080/api/films/add`, xd, {headers: {'Content-Type': 'application/json', 'Host' : 'http://localhost:3000'  
+          , 'Content-Length' : '1000' }})
+          console.log(res);
           resetForm();
         },
       });

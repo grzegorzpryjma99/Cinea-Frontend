@@ -1,13 +1,53 @@
 import Routes from "./routes/Routes.jsx";
-import { BrowserRouter, Route } from "react-router-dom";
-import "./App.css";
+import {Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import "./App.css";import React from "react";
+import AddFilm from "../src/components/AddFilm";
+import {AdminPanel} from "../src/components/AdminPanel";
+import AddScrenning from "../src/components/AddScreening.jsx";
+import AdminSettings from "../src/components/AdminSettings.jsx";
+import Film from "./components/Film.jsx";
+import MainPage from "./components/MainPage.jsx";
+import Signin from "./components/Signin.jsx";
+import Signup from "./components/Signup.jsx";
+import Logout from "./components/Logout.jsx";
 
 function App() {
   return (
     <div className='app'>
-      <BrowserRouter>
+      <Router>
+        <AdminPanel>
+          <Switch>
+
+            <Route path='/signup'>
+              <Signup />
+            </Route>
+            <Route path='/main-page'>
+              <MainPage />
+            </Route>
+            <Route path='/film/:filmId'>
+              <Film />
+            </Route>
+            <Route path='/adminSettings'> 
+              <AdminSettings />
+            </Route>
+            <Route path='/addFilm'> 
+              <AddFilm />
+            </Route>
+            <Route path='/addScreening'>
+              <AddScrenning />
+            </Route>
+            <Route exec path='/'>
+              <Signin />
+            </Route>
+          </Switch>
+          
+        </AdminPanel>
+      </Router>
+
+      {/* <BrowserRouter>
         <Route component={Routes} />
-      </BrowserRouter>
+      </BrowserRouter> */}
+
     </div>
   );
 }

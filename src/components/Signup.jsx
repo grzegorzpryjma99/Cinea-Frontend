@@ -34,7 +34,6 @@ const Signup = () => {
         }
       };
       console.log(form)
-      dispatch(signup(form));
       resetForm();
     },
   });

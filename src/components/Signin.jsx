@@ -11,13 +11,10 @@ import { signin } from "../actions/auth.js";
 const Signin = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const auth = useSelector(state => state.auth)
+
   const togglePanel = () => {
     history.push("/signup");
   };
-
-  if(auth.login) history.push('/logout');
-  if(auth.login_error) console.log("server error")
 
   const formik = useFormik({
     initialValues: {
@@ -30,10 +27,11 @@ const Signin = () => {
         email: values.email,
         password: values.password,
       };
-      dispatch(signin(form))
+      //dispatch(signin(form))
       resetForm();
     },
   });
+
   return (
     <section>
         <img src={logo} className="logo-login"/>

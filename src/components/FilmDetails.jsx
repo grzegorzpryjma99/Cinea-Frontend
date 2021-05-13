@@ -13,20 +13,11 @@ import { Route, NavLink, HashRouter} from "react-router-dom";
 import plakat from './platak.svg'
 import axios from 'axios'
 
-class FilmsDetails extends Component {
+const FilmDetails = (dane) =>{
 
-    constructor(props) {
-        super(props);
-    
-      this.state ={
-        data: ""
-      }
-    }
-      render(){
-        console.log(this.props.dane)
         return (
             <section>
-                <h1 className='title'>{this.props.dane.filmDetails.title}</h1>
+                <h1 className='title'>{dane.dane.filmDetails.title}</h1>
                 <div className='container-film'>
                     <div className='photo'>
                         <img src={plakat}/>
@@ -39,7 +30,7 @@ class FilmsDetails extends Component {
                                 </div>
                                 <div className="date-div">
                                     <p>Data premiery</p>
-                                    <p>{this.props.dane.filmDetails.releaseDate}</p>
+                                    <p>{dane.dane.filmDetails.releaseDate}</p>
                                 </div>
                             </div>
                             <div className='time'>
@@ -48,12 +39,12 @@ class FilmsDetails extends Component {
                                 </div>
                                 <div className='time-div'>
                                     <p>Czas trwania</p>
-                                    <p>{this.props.dane.filmDetails.time}</p>
+                                    <p>{dane.dane.filmDetails.time}</p>
                                 </div>
                             </div>
                         </div>
                         <div className='description'>
-                            <p>{this.props.dane.filmDetails.description}</p>
+                            <p>{dane.dane.filmDetails.description}</p>
                         </div>
                         <button className='booking-button'>Kup bilety</button>
                     </div>
@@ -69,9 +60,10 @@ class FilmsDetails extends Component {
             </section>
               );
         }
-    }
+    
 
-    export default FilmsDetails;
+    export default FilmDetails;
+        ;
 //     const state = useState({
 //         title: "",
 //         description: ""
