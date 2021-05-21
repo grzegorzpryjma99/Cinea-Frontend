@@ -1,17 +1,8 @@
-import React, { Component,useEffect, useState } from "react";
-import { BrowserRouter, useHistory } from "react-router-dom";
-import { useFormik } from "formik";
+import React from "react";
+import zwiastun from './zwiastun.svg'
 import "./film-page.css"
-import logo from './logo.svg'
-import { SigninSchema } from "../validation/formValidation.js";
-import { useDispatch, useSelector} from "react-redux";
-import { signin } from "../actions/auth.js";
-import Header from "./Header";
-import Footer from "./Footer";
-import Main from "./Main";
-import { Route, NavLink, HashRouter} from "react-router-dom";
-import plakat from './platak.svg'
-import axios from 'axios'
+import plakat from '../platak.svg'
+import { FaRegClock , FaCalendarAlt } from "react-icons/fa";
 
 const FilmDetails = (dane) =>{
 
@@ -26,7 +17,7 @@ const FilmDetails = (dane) =>{
                         <div className='data-time'>
                             <div className='date'>
                                 <div className='data-icon'>
-                                    placeholder
+                                    <FaCalendarAlt />
                                 </div>
                                 <div className="date-div">
                                     <p>Data premiery</p>
@@ -35,7 +26,7 @@ const FilmDetails = (dane) =>{
                             </div>
                             <div className='time'>
                                 <div className='time-icon'>
-                                    placeholder
+                                    <FaRegClock />
                                 </div>
                                 <div className='time-div'>
                                     <p>Czas trwania</p>
@@ -51,9 +42,19 @@ const FilmDetails = (dane) =>{
                 </div>
             
                 <div>
-                        <h1 class="title">Zobacz zwiastun</h1>
-                        <div class='trailer'>
-                            <img src='zwiastun.svg'></img>
+                        <h1 className="title">Zobacz zwiastun</h1>
+                        <div className='trailer'>
+                            <img src={zwiastun}></img>
+                        </div>
+                        <div className='full-details'>
+                            <ul>
+                                <li>Tytuł oryginalny</li>
+                                <li>Gatunek filmu {dane.dane.filmDetails.category}</li>
+                                <li>Reżyser</li>
+                                <li>Produkcja</li>
+                                <li>Obsada</li>
+                            </ul>
+
                         </div>
                 </div>
             

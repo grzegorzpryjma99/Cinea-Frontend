@@ -1,11 +1,9 @@
 import React, { Component, useContext, useEffect, useState } from 'react'
-import FilmAPI from '../api/api.js'
 import { BrowserRouter, Link ,useParams} from 'react-router-dom'
-import Header from './Header.jsx'
-import Footer from './Footer.jsx'
+import Header from '../home/Header'
+import Footer from '../home/Footer.jsx'
 import FilmsDetails from './FilmDetails.jsx'
-import axios from 'axios'
-import { ScreeningContext } from './AdminPanel.jsx'
+
 
 
 const Film = () =>{

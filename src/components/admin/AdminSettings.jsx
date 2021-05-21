@@ -1,16 +1,11 @@
 import React, {createContext, useContext ,useEffect, useState}from "react";
 import { useHistory } from "react-router-dom";
-import { useFormik } from "formik";
-import logo from './logo.svg'
-import { SignupSchema } from "../validation/formValidation.js";
-import { useDispatch, useSelector} from "react-redux";
-import { signup } from "../actions/auth.js";
-import "./Signin.css"
+import "../Signin.css"
 import "./Admin.css"
 import { ScreeningContext } from "./AdminPanel"
 import { ImBin2 } from 'react-icons/im';
 import { FiSettings } from "react-icons/fi";
-import AddScrenning from "./AddScreening";
+
 
 
 

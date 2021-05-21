@@ -1,50 +1,130 @@
-import React from "react";
+import React, {useState, useRef} from "react";
 import { useHistory } from "react-router-dom";
-import { useFormik } from "formik";
 import logo from './logo.svg'
-import { SignupSchema } from "../validation/formValidation.js";
-import { useDispatch, useSelector} from "react-redux";
-import { signup } from "../actions/auth.js";
+import AuthService from "../services/auth.service";
 
 const Signup = () => {
-  const history = useHistory();
-  const dispatch = useDispatch();
-  const auth = useSelector(state => state.auth)
-  const togglePanel = () => {
+  // const history = useHistory();
+  // const dispatch = useDispatch();
+  // const auth = useSelector(state => state.auth)
+  // const togglePanel = () => {
+  //   history.push("/");
+  // };
+
+  // if(auth.register_error) console.log("server error")
+
+  // const formik = useFormik({
+  //   initialValues: {
+  //     name: "",
+  //     surname: "",
+  //     email: "",
+  //     password: "",
+  //   },
+  //   validationSchema: SignupSchema,
+  //   onSubmit: (values, { resetForm }) => {
+  //     const form = {
+  //       email: values.email,
+  //       password: values.password,
+  //       userDetails:{
+  //         name: values.name, 
+  //         surname: values.surname
+  //       }
+  //     };
+  //     console.log(form)
+  //     resetForm();
+  //   },
+  // });
+
+ const togglePanel = () => {
     history.push("/");
   };
+  const form = useRef();
+  const checkBtn = useRef();
+  const history = useHistory();
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [successful, setSuccessful] = useState(false);
+  const [message, setMessage] = useState("");
 
-  if(auth.register_error) console.log("server error")
+  const onChangeUsername = (e) => {
+    const username = e.target.value;
+    setUsername(username);
+  };
 
-  const formik = useFormik({
-    initialValues: {
-      name: "",
-      surname: "",
-      email: "",
-      password: "",
-    },
-    validationSchema: SignupSchema,
-    onSubmit: (values, { resetForm }) => {
-      const form = {
-        email: values.email,
-        password: values.password,
-        userDetails:{
-          name: values.name, 
-          surname: values.surname
+  const onChangeEmail = (e) => {
+    const email = e.target.value;
+    setEmail(email);
+  };
+
+  const onChangePassword = (e) => {
+    const password = e.target.value;
+    setPassword(password);
+  };
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+
+    setMessage("");
+    setSuccessful(false);
+
+
+
+      AuthService.register(username, email, password).then(
+        (response) => {
+          setMessage(response.data.message);
+          setSuccessful(true);
+          history.push("/");
+          window.location.reload();
+        },
+        (error) => {
+          const resMessage =
+            (error.response &&
+              error.response.data &&
+              error.response.data.message) ||
+            error.message ||
+            error.toString();
+
+          setMessage(resMessage);
+          setSuccessful(false);
         }
-      };
-      console.log(form)
-      resetForm();
-    },
-  });
+      );
+    
+  };
+
   return (
     <section>
         <img src={logo} className="logo-register"/>
         <h1 class='register-header'>REJESTRACJA</h1>
         <div class='container'>
-        <form  className='register-form' onSubmit={formik.handleSubmit}>
-          
+        <form  className='register-form' onSubmit={handleRegister}>
           <input
+            id='username'
+            name='username'
+            type='username'
+            onChange={onChangeUsername}
+            value={username}
+          />
+
+          <input
+            id='email'
+            name='email'
+            type='email'
+            onChange={onChangeEmail}
+            value={email}
+          />
+
+          <input
+            id='password'
+            name='password'
+            type='password'
+            onChange={onChangePassword}
+            value={password}
+          />
+
+
+
+          {/* <input
             id='email'
             name='email'
             type='email'
@@ -107,7 +187,7 @@ const Signup = () => {
             value="2020-07-22"
             min="1920-01-01" 
             max="2020-12-31"
-           />
+           /> */}
         
           <button className='login-button' type='submit'>Zarejestruj się</button>
         </form>

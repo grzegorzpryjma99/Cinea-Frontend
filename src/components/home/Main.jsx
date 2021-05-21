@@ -1,16 +1,9 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { BrowserRouter, Redirect, useHistory } from 'react-router-dom'
-import auth from '../reducers/auth';
-import { useSelector } from 'react-redux'
-import logo from './logo.svg'
 import { Switch, Route } from 'react-router-dom'
 import "./MainPage.css"
 import Recomended from "./Recomended";
 import Repertoire from "./Repertoire"
-import Footer from './Footer';
-import Header from './Header';
-import Films from './Films'
+import Films from '../filmpage/Films'
 
 const Main = () =>  {
 

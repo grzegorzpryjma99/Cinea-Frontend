@@ -1,20 +1,9 @@
-import React ,{useEffect,setState,setHasError,setLoading,useState} from 'react';
-import { useDispatch } from 'react-redux';
-import { NavLink, Redirect, useHistory } from 'react-router-dom'
-import auth from '../reducers/auth';
-import { useSelector } from 'react-redux'
-import logo from './logo.svg'
+import React from 'react';
+
+import { NavLink } from 'react-router-dom'
 import "./MainPage.css"
-import { Route, Switch } from "react-router-dom";
-
-import FilmAPI from '../api/api'
 import plakat from './platak.svg'
-import { Link } from 'react-router-dom'
-import Film from './Film';
-import Signin from './Signin';
 import axios from 'axios'
-import { Carousel } from 'react-responsive-carousel';
-
 import { Component } from 'react';
 
 class ProposedFilms extends Component {

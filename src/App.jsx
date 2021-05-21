@@ -1,15 +1,14 @@
 import Routes from "./routes/Routes.jsx";
 import {Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import "./App.css";import React from "react";
-import AddFilm from "../src/components/AddFilm";
-import {AdminPanel} from "../src/components/AdminPanel";
-import AddScrenning from "../src/components/AddScreening.jsx";
-import AdminSettings from "../src/components/AdminSettings.jsx";
-import Film from "./components/Film.jsx";
-import MainPage from "./components/MainPage.jsx";
+import AddFilm from "../src/components/admin/AddFilm";
+import {AdminPanel} from "../src/components/admin/AdminPanel";
+import AddScrenning from "../src/components/admin/AddScreening.jsx";
+import AdminSettings from "./components/admin/AdminSettings.jsx";
+import Film from "./components/filmpage/Film.jsx";
+import MainPage from "./components/home/MainPage.jsx";
 import Signin from "./components/Signin.jsx";
 import Signup from "./components/Signup.jsx";
-import Logout from "./components/Logout.jsx";
 
 function App() {
   return (

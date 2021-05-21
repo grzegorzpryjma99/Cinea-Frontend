@@ -1,10 +1,6 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { Redirect, useHistory } from 'react-router-dom'
-import auth from '../reducers/auth';
-import { useSelector } from 'react-redux'
-import plakat from './platak.svg'
-import "./MainPage.css"
+import plakat from '../platak.svg'
+import "../home/MainPage.css"
 
 const Films = () =>  {
 

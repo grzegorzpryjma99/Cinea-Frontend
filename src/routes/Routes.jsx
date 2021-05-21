@@ -3,12 +3,12 @@ import { Route, Switch } from "react-router-dom";
 import Signin from "../components/Signin.jsx";
 import Signup from "../components/Signup.jsx";
 import Logout from "../components/Logout.jsx";
-import MainPage from "../components/MainPage.jsx";
-import Film from "../components/Film.jsx";
-import AddFilm from "../components/AddFilm.jsx";
-import {AdminPanel} from "../components/AdminPanel";
-import AddScrenning from "../components/AddScreening.jsx";
-import AdminSettings from "../components/AdminSettings.jsx";
+import MainPage from "../components/home/MainPage";
+import Film from "../components/filmpage/Film.jsx";
+import AddFilm from "../components/admin/AddFilm";
+import {AdminPanel} from "../components/admin/AdminPanel";
+import AddScrenning from "../components/admin/AddScreening.jsx";
+import AdminSettings from "../components/admin/AdminSettings.jsx";
 
 const Routes = () => {
   return (
