@@ -1,39 +1,11 @@
 import React, {useState, useRef} from "react";
 import logo from './logo.svg'
+import "./Signin.css"
 import AuthService from "../services/auth.service";
 import { NavLink, useHistory } from "react-router-dom";
 
 const Signup = () => {
-  // const history = useHistory();
-  // const dispatch = useDispatch();
-  // const auth = useSelector(state => state.auth)
-  // const togglePanel = () => {
-  //   history.push("/");
-  // };
 
-  // if(auth.register_error) console.log("server error")
-
-  // const formik = useFormik({
-  //   initialValues: {
-  //     name: "",
-  //     surname: "",
-  //     email: "",
-  //     password: "",
-  //   },
-  //   validationSchema: SignupSchema,
-  //   onSubmit: (values, { resetForm }) => {
-  //     const form = {
-  //       email: values.email,
-  //       password: values.password,
-  //       userDetails:{
-  //         name: values.name, 
-  //         surname: values.surname
-  //       }
-  //     };
-  //     console.log(form)
-  //     resetForm();
-  //   },
-  // });
 
  const togglePanel = () => {
     history.push("/");
@@ -94,13 +66,14 @@ const Signup = () => {
 
   return (
     <section>
-       <NavLink to='/main-page'><img src={logo} className="logo-register"/></NavLink>
+       <NavLink to='/main-page'><img src={logo} className="logo-login"/></NavLink>
         <h1 class='register-header'>REJESTRACJA</h1>
-        <div class='container'>
+        <div class='container-login'>
         <form  className='register-form' onSubmit={handleRegister}>
           <input
             id='username'
             name='username'
+            placeholder='login'
             type='username'
             onChange={onChangeUsername}
             value={username}
@@ -109,6 +82,7 @@ const Signup = () => {
           <input
             id='email'
             name='email'
+            placeholder='email'
             type='email'
             onChange={onChangeEmail}
             value={email}
@@ -118,76 +92,10 @@ const Signup = () => {
             id='password'
             name='password'
             type='password'
+            placeholder='haslo'
             onChange={onChangePassword}
             value={password}
           />
-
-
-
-          {/* <input
-            id='email'
-            name='email'
-            type='email'
-            onChange={formik.handleChange}
-            value='email'
-          />
-
-          <input
-            id='email'
-            name='email'
-            type='email'
-            onChange={formik.handleChange}
-            value='powtórz email'
-          />
-
-          <input
-            id='password'
-            name='password'
-            type='password'
-            onChange={formik.handleChange}
-            value='hasło'
-          />
-
-          <input
-            id='password'
-            name='password'
-            type='password'
-            onChange={formik.handleChange}
-            value='haslo'
-          />
-
-          <input
-            id='name'
-            name='name'
-            type='name'
-            onChange={formik.handleChange}
-            value='imię'
-          />
-
-          <input
-            id='surname'
-            name='surname'
-            type='surname'
-            onChange={formik.handleChange}
-            value='nazwisko'
-          />
-
-          <input
-            id='phone'
-            name='phone'
-            type='phone'
-            onChange={formik.handleChange}
-            value='numer telefonu'
-          />
-
-          <input 
-            type="date" 
-            id="start" 
-            name="trip-start"
-            value="2020-07-22"
-            min="1920-01-01" 
-            max="2020-12-31"
-           /> */}
         
           <button className='login-button' type='submit'>Zarejestruj się</button>
         </form>

@@ -8,7 +8,7 @@ const Footer = () =>  {
       };
 
     return (
-        <footer>
+        <footer className='footerr'>
         <div className='about-us'>
             <h1>O nas</h1>
             <p>f the primary page. Thetag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the pri</p>

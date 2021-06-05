@@ -8,7 +8,7 @@ import "./Slider.css"
 import {Image} from 'cloudinary-react';
 
 
-export default class CenterMode extends Component {
+export default class Responsive extends Component {
 
     constructor(props) {
         super(props);
@@ -37,7 +37,21 @@ export default class CenterMode extends Component {
       autoplay: true,
       centerPadding: "0px",
       slidesToShow: 3,
-      speed: 500
+      speed: 500,
+      responsive: [{
+        breakpoint: 620,
+        settings: {
+          slidesToShow: 1,
+        },
+        
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+        },
+        
+      }]
     };
 
     const filmList = this.state.data && this.state.data.map(film => {

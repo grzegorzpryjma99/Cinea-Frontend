@@ -43,6 +43,15 @@ html, body {
     border: 0;
     outline: 0;
     height: 2em;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.login-register-buttons-mobile>button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    height: 2em;
     font-size: 30px;
 }
 
@@ -157,7 +166,6 @@ html, body {
 /*footer*/
 footer{
     bottom:0;
-    background:#b5fbbd;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -226,6 +234,7 @@ footer{
     height: 3em;
     margin-right: auto;
     margin-left: auto;
+    cursor: pointer;
 }
 
 .monday{
@@ -236,3 +245,119 @@ width: 80px;
 .mapka{
     height: 200px;
 }
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    padding: 1em;
+    overflow: auto;
+}
+
+.hamburger-react{
+    display: none;
+}
+
+.login-register-buttons-mobile{
+    display: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-device-width: 420px){
+    .logo{
+        height: 60px;
+    }
+
+    .login-btn{
+
+    }
+
+    .register-btn{
+
+    }
+
+    .login-register-buttons{
+        display: none;
+    }
+
+    .login-register-buttons-mobile{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height: 60vh;
+        width: 100%;
+        background-color:#C4C4C4;
+        justify-content: center;
+    }
+
+    .repertoire {
+        background-color: #C4C4C4;
+        height: 8em;
+        padding: 1em;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .repertuar {
+        text-align: center;
+        padding: 0.5em;
+        font-size: 28px;
+        margin: 0;
+    }
+
+    .the-film {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5em;
+    }
+
+    .screening-image {
+        width: 290px;
+        height: 354px;
+        box-shadow: 5px 5px 13px -2px rgb(0 0 0 / 75%);
+    }
+
+    .film-details>h1{
+        font-size: 20px;
+    }
+
+    .short-description {
+        display: none;
+    }
+
+    .order-button{
+        width: 60vw;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footerr{
+        flex-direction: column;
+    }
+
+    .map{
+        width: 80vw;
+    }
+
+    .about-us{
+        width: 90vw;
+    }
+
+    .slider{
+        margin: 0;
+    }
+
+    .hamburger-react{
+        display: flex;
+        top: 5px;
+    }
+
+    
+}
+
+

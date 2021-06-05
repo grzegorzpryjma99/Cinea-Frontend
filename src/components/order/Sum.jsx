@@ -11,10 +11,10 @@ const Sum = () =>  {
         <main>
         <Header/>
         <section className='sum-section'>
-        <h className='register-header'>Sprawdź swoje zamówienie</h>
+        <h className='cart-header'>Sprawdź swoje zamówienie</h>
 
         <div className='ticket'>
-            <div >
+            <div className='div-ticket-image'>
               <img className='ticket-image' src={plakat}></img>
             </div>
             <div>

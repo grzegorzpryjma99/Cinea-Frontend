@@ -1,38 +1,10 @@
 import React ,{useState}from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import "./Signin.css"
-import "./Signup.css"
 import logo from './logo.svg'
 import AuthService from "../services/auth.service";
 
 const Signin = (props) => {
-  // const dispatch = useDispatch();
-  // const history = useHistory();
-  // const [username, setUsername] = useState("");
-  // const [password, setPassword] = useState("");
-
-  // const togglePanel = () => {
-  //   history.push("/signup");
-  // };
-
-  // const formik = useFormik({
-  //   initialValues: {
-  //     username: "",
-  //     password: "",
-  //   },
-  //   validationSchema: SigninSchema,
-  //   onSubmit: (values, { resetForm }) => {
-  //     const form = {
-  //       username: values.username,
-  //       password: values.password,
-  //       setUsername(username);
-  //       setPassword(password);
-  //     };
-  //     AuthService.login(username,password)
-  //     //dispatch(signin(form))
-  //     resetForm();
-  //   },
-  // });
 
   const history = useHistory();
   const [username, setUsername] = useState("");
@@ -55,13 +27,16 @@ const Signin = (props) => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-
-    //form.current.validateAll();
-
       AuthService.login(username, password).then(
         () => {
-          history.push("/main-page");
-          window.location.reload();
+          if(JSON.parse(localStorage.getItem('user')).roles[0] == 'ROLE_ADMIN'){
+            history.push("/adminSettings");
+            window.location.reload();
+          } else{
+            history.push("/main-page");
+            window.location.reload();
+          }
+          
         },
         (error) => {
           const resMessage =
@@ -83,6 +58,7 @@ const Signin = (props) => {
           <input
             id='username'
             name='username'
+            placeholder='login'
             type='username'
             onChange={onChangeUsername}
             value={username}
@@ -95,6 +71,7 @@ const Signin = (props) => {
           <input
             id='password'
             name='password'
+            placeholder='haslo'
             type='password'
             onChange={onChangePassword}
             value={password}

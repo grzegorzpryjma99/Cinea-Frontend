@@ -7,9 +7,9 @@ html, body {
 *{
     font-weight: normal;
     margin-left: auto;
+    font-family: 'Roboto', sans-serif;
     margin-right: auto;
     font-style: normal;
-
 }
 
 .logo-login{
@@ -78,3 +78,43 @@ html, body {
     padding: 0.3em;
     margin-top: 0;
 }
+
+
+/* register */
+
+
+
+
+.register-header{
+    text-align: center;
+    margin-top: 0;
+    
+}
+
+
+form>input{
+    width: 30vw;
+    margin: 1em;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+
+}
+
+
+@media only screen and (max-device-width: 420px){
+    .logo-login{
+        width: 50%;
+    }
+
+    .container-login{
+        width: 80%;
+    }
+
+    .register-header {
+        display: none;
+    }
+
+}
+

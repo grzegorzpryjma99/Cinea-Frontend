@@ -64,7 +64,7 @@ const Cart = () =>  {
         <Header/>
         
         <section className='cart-section'>
-        <h className="register-header">Wybierz bilety</h>
+        <h className="cart-header">Wybierz bilety</h>
 
             <div className='normal-ticket'>
                 <div>normalny {normalPrice + 'PLN'}</div>

@@ -41,22 +41,6 @@ html, body {
     font-size: 1.3em;
 }
 
-.login-register-buttons{
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 2em;
-}
-
-.login-register-buttons>button{
-    background-color: transparent;
-    border: 0;
-    outline: 0;
-    height: 2em;
-    font-size: 30px;
-}
-
 .cinema-location{
     align-items: center;
 }
@@ -138,35 +122,44 @@ font-weight: 300;
     text-align: center;
 }
 
+@media only screen and (max-device-width: 420px){
 
-/*footer*/
-footer{
-    bottom:0;
-    background:#b5fbbd;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background: #C4C4C4;
-    opacity: 80%;
+.photo{
+    width: 90vw;
 }
 
-.about-us{
-    width: 33vw;
-    flex-direction: column;
-    display: flex;
-    padding: 1em;
+.film-image {
+    width: 320px;
+    height: 391px;
 }
 
-.contact{
-    width: 33vw;
+.container-film{
     flex-direction: column;
-    display: flex;
-    padding: 1em;
 }
 
-.map{
-    width: 33vw;
-    flex-direction: column;
-    display: flex;
-    padding: 1em;
+.details{
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.data-icon{
+    font-size: 35px;
+}
+
+.time-icon{
+    font-size: 35px;
+}
+
+.data-time{
+    font-size: 1.2em;
+}
+
+.booking-button{
+    width: 55vw;
+}
+
+iframe{
+    width: 98vw;
+}
 }

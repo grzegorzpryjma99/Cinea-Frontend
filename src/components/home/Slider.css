@@ -13,3 +13,20 @@
 .slick-prev {
     left: -75px;
 }
+
+@media only screen and (max-device-width: 420px){
+
+    .slider{
+        margin: 0;
+    }
+
+    .slick-prev {
+        left: 0px;
+        z-index: 9999;
+    }
+
+    .slick-next {
+        right: 30px;
+    }
+
+}
