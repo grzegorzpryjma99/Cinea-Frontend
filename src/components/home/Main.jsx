@@ -1,29 +1,37 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom'
+import React, {useContext, useState} from 'react';
+import { Switch, Route, useParams, Link} from 'react-router-dom'
 import "./MainPage.css"
 import Recomended from "./Recomended";
 import Repertoire from "./Repertoire"
-import Films from '../filmpage/Films'
+import Films from './Films'
+
 
 const Main = () =>  {
 
-    const togglePanel = () => {
-        
-      };
-
-    return (
+  const now = new Date();
+  const [date, setDate]= useState(`${now.getFullYear()}-${0}${now.getMonth()+1}-${0}${now.getDate()}`)
+ 
+  return (
             <div>
-            <Recomended />
-            <Repertoire />
-            <Switch>
-                <Route path='/main-page/pn' component={Films}/>
-                <Route path='/main-page/wt' component={Films}/>
-                <Route path='/main-page/sr' component={Films}/>
-                <Route path='/main-page/cz' component={Films}/>
-                <Route path='/main-page/pt' component={Films}/>
-                <Route path='/main-page/sob' component={Films}/>
-                <Route path='/main-page/nd' component={Films}/>
-            </Switch>
+              <Recomended />
+
+              <div className="repertoire">
+                <h1 className='repertuar'>Repertuar</h1>
+                <div className="repertoire-buttons">
+                    <input 
+                    className='choose-date'
+                    value={date}
+                    onChange={(e) => {const date = e.target.value; setDate(date);}}
+                    type='date'></input>
+                    <Link to={`/main-page/seanse`}><button className='order-button' >Znajdź seans </button></Link>
+                </div>
+              </div>
+
+              <Switch>
+                  <Route path={`/main-page/seanse`}>
+                    <Films data={date}/>
+                  </Route>
+              </Switch>
        </div>
            
   );

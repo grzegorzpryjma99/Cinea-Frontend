@@ -9,27 +9,28 @@ import AddFilm from "../components/admin/AddFilm";
 import {AdminPanel} from "../components/admin/AdminPanel";
 import AddScrenning from "../components/admin/AddScreening.jsx";
 import AdminSettings from "../components/admin/AdminSettings.jsx";
+import dupa from "../components/order/Cart";
+
 
 const Routes = () => {
   return (
     <AdminPanel>
     <Switch>
-      <Route path='/' exact component={Signin} />
       <Route path='/signup' component={Signup} />
+      <Route path='/' component={Signin} />
       <Route path='/logout' component={Logout} />
-      <Route path='/main-page' component={MainPage} />
+      <Route exec path='/main-page' component={MainPage} />
+      <Route path='/cart' component={dupa}/>
       <Route path='/film/:filmId' component={Film} />
-
-          <Route path='/adminSettings'> 
-            <AdminSettings />
-          </Route>
-          <Route path='/addFilm'> 
-            <AddFilm />
-          </Route>
-          <Route path='/addScreening'>
-            <AddScrenning />
-          </Route>
-      
+      <Route path='/adminSettings'> 
+        <AdminSettings />
+      </Route>
+      <Route path='/addFilm'> 
+        <AddFilm />
+      </Route>
+      <Route path='/addScreening'>
+        <AddScrenning />
+      </Route>
     </Switch>
     </AdminPanel>
   );

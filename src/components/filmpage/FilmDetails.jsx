@@ -1,17 +1,17 @@
 import React from "react";
-import zwiastun from './zwiastun.svg'
 import "./film-page.css"
-import plakat from '../platak.svg'
 import { FaRegClock , FaCalendarAlt } from "react-icons/fa";
+import {Image} from 'cloudinary-react';
+import Trailer from './Trailer'
 
 const FilmDetails = (dane) =>{
-
+        
         return (
             <section>
                 <h1 className='title'>{dane.dane.filmDetails.title}</h1>
                 <div className='container-film'>
                     <div className='photo'>
-                        <img src={plakat}/>
+                    <Image className='film-image' cloudName="dhdzistwc" publicId={dane.dane.filmDetails.imageURL}/>
                     </div>
                     <div className='details'>
                         <div className='data-time'>
@@ -44,7 +44,7 @@ const FilmDetails = (dane) =>{
                 <div>
                         <h1 className="title">Zobacz zwiastun</h1>
                         <div className='trailer'>
-                            <img src={zwiastun}></img>
+                            <Trailer id={dane.dane.filmDetails.trailer}/>
                         </div>
                         <div className='full-details'>
                             <ul>

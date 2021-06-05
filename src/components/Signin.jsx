@@ -1,5 +1,5 @@
-import React ,{useState, useRef}from "react";
-import { useHistory } from "react-router-dom";
+import React ,{useState}from "react";
+import { NavLink, useHistory } from "react-router-dom";
 import "./Signin.css"
 import "./Signup.css"
 import logo from './logo.svg'
@@ -76,7 +76,7 @@ const Signin = (props) => {
   
   return (
     <section>
-        <img src={logo} className="logo-login"/>
+      <NavLink to='/main-page'><img src={logo} className="logo-login"/></NavLink>
         <div className='container-login'>
         <form  onSubmit={handleLogin}>
         <label htmlFor='email'></label>

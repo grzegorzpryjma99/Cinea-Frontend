@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import { NavLink, Redirect, useHistory } from 'react-router-dom'
-
+import { NavLink } from 'react-router-dom'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import axios from 'axios'
 import Slider from "react-slick";
-import plakat from '../platak.svg'
 import "./Slider.css"
+import {Image} from 'cloudinary-react';
+
+
 export default class CenterMode extends Component {
 
     constructor(props) {
@@ -41,9 +42,9 @@ export default class CenterMode extends Component {
 
     const filmList = this.state.data && this.state.data.map(film => {
         return(
-            <NavLink to={`/film/${film.id}`}>  
+            <NavLink to={`/film/${film.id}`} >  
             <div  key={film.id}>
-                <img className='image-slider' src={plakat}></img>
+              <Image className='film-image' cloudName="dhdzistwc" publicId={film.filmDetails.imageURL}/>
             </div>
             </NavLink>
         );

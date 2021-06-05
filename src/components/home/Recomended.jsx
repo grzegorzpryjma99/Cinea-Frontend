@@ -1,4 +1,4 @@
-import React, { useState, useEffect,setState,setLoading,setHasError } from 'react';
+import React from 'react';
 import "./MainPage.css"
 import Film from '../filmpage/Film'
 import { Switch, Route } from 'react-router-dom'

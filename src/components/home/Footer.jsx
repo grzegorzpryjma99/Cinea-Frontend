@@ -1,6 +1,6 @@
 import React from 'react';
 import "./MainPage.css"
-
+import mapka from './mapka.svg'
 const Footer = () =>  {
 
     const togglePanel = () => {
@@ -18,7 +18,10 @@ const Footer = () =>  {
             <p>123456789</p>
             <p>kino@gmail.com</p>
         </div>
-        <div className='map' id="map"></div>
+        <div className='map' id="map">
+
+          <img className='mapka' src={mapka}></img>
+        </div>
         </footer>
   );
 };

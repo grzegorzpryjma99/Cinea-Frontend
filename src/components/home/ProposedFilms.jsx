@@ -5,6 +5,7 @@ import "./MainPage.css"
 import plakat from './platak.svg'
 import axios from 'axios'
 import { Component } from 'react';
+import {Image} from 'cloudinary-react';
 
 class ProposedFilms extends Component {
 
@@ -32,8 +33,7 @@ class ProposedFilms extends Component {
             return(
                 <NavLink to={`/film/${film.id}`}>  
                 <div key={film.id}>
-                    <div>{film.filmDetails.title}</div>
-                    <img src={plakat}></img>
+                    <Image cloudName="dhdzistwc" publicId={film.filmDetails.imageURL}/>
                 </div>
                 </NavLink>
             );

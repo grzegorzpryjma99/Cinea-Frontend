@@ -9,6 +9,9 @@ import Film from "./components/filmpage/Film.jsx";
 import MainPage from "./components/home/MainPage.jsx";
 import Signin from "./components/Signin.jsx";
 import Signup from "./components/Signup.jsx";
+import Cart from "./components/order/Cart.jsx";
+import Sum from "./components/order/Sum.jsx";
+import Place from "./components/order/Place.jsx";
 
 function App() {
   return (
@@ -16,7 +19,12 @@ function App() {
       <Router>
         <AdminPanel>
           <Switch>
-
+            <Route path='/cart/place'>
+              <Place />
+            </Route>
+            <Route path='/cart/sum'>
+              <Sum />
+            </Route>
             <Route path='/signup'>
               <Signup />
             </Route>
@@ -35,9 +43,13 @@ function App() {
             <Route path='/addScreening'>
               <AddScrenning />
             </Route>
+            <Route path='/cart/:screeningId'>
+              <Cart />
+            </Route>
             <Route exec path='/'>
               <Signin />
             </Route>
+            
           </Switch>
           
         </AdminPanel>

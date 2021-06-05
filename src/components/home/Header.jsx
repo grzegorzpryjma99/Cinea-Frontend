@@ -25,7 +25,6 @@ const Header = () =>  {
         <header className='haeder'>
         <img src={logo} className="logo"/>
         <div className='login-register-buttons'>
-            
             <button className='login-btn' onClick={toLogin}><FaUser />{localStorage.getItem("user") ? "wyloguj" :"logowanie" }</button>
             <button className='register-btn' onClick={toRegister}>{localStorage.getItem("user") ? "" :"rejestracja" }</button>
         </div>
