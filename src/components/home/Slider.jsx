@@ -58,7 +58,7 @@ export default class Responsive extends Component {
         return(
             <NavLink to={`/film/${film.id}`} >  
             <div  key={film.id}>
-              <Image className='film-image' cloudName="dhdzistwc" publicId={film.filmDetails.imageURL}/>
+              <Image className='film-image-slider' cloudName="dhdzistwc" publicId={film.filmDetails.imageURL}/>
             </div>
             </NavLink>
         );

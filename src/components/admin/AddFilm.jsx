@@ -3,6 +3,10 @@ import { useFormik } from "formik";
 import { useDispatch } from "react-redux";
 import axios from 'axios';
 import {Image} from 'cloudinary-react';
+
+import "../Signin.css"
+import "./Admin.css"
+
 const AddFilm = () => {
  
   const[imageSelected, setImageSelected] = useState("");

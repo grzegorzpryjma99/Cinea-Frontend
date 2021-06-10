@@ -12,6 +12,7 @@ import Signup from "./components/Signup.jsx";
 import Cart from "./components/order/Cart.jsx";
 import Sum from "./components/order/Sum.jsx";
 import Place from "./components/order/Place.jsx";
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
               <Signup />
             </Route>
             <Route path='/main-page'>
+              <MainPage />
+            </Route>
+            <Route path='/galeria'>
               <MainPage />
             </Route>
             <Route path='/film/:filmId'>

@@ -10,8 +10,15 @@ import { CartContext } from "../order/CartContext"
 const Films = (data) =>  {
 
 
+    console.log(data)
     const {seanse} = useContext(ScreeningContext) 
-    const result = seanse.filter(seans => seans.date== (data.data));//podac date 
+    console.log(seanse)
+    
+    const result = seanse.filter(seans => (seans.date == (data.data) && (seans.film.filmDetails.title == (data.film))));//podac date 
+    const result2 = seanse.filter(seans => (seans.film.filmDetails.title == (data.film)));//podac date 
+
+    console.log(result);
+    console.log(result2);
 
     return (
         <div>

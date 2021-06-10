@@ -3,47 +3,83 @@ import Header from '../home/Header';
 import "./order.css"
 import { ScreeningContext } from "../admin/AdminPanel"
 import { NavLink } from 'react-router-dom';
+import { Placeholder } from 'cloudinary-react';
 
 const Place = () =>  {
 
-  const { tickets, orderScreening } = useContext(ScreeningContext);
-    const {room} = useContext(ScreeningContext)  // chwilowo pobieram sobie dowolny pokoj
-    const [rooms, setRooms] = useState();
+    const { tickets, orderScreening, updateOrderPlaces, tablicaNormal, tablicaHalf, normal, half} = useContext(ScreeningContext);
     const [counter, setCounter] = useState(tickets);
-    const [miejsce, setMiejsce] = useState("");
-    
-    console.log(orderScreening.room, 'cos')
+
+    const [currentData, setCurrendData] = useState([])
+    const [limit, setLimit] = useState(tickets)
+
+    const tablicaMiejsczajetych = [];
+
+    var tab = orderScreening.room.places
+    var zajete = orderScreening.zajeteMiejsca
+
+    const xd = () => {
+      updateOrderPlaces(currentData);
+      
+  }
+    tab.forEach(function (item) {
+      zajete.forEach(function (item2) {
+      if(item.row === item2.place[0].row && item.place === item2.place[0].place){
+        tablicaMiejsczajetych.push(item.id)
+      }       
+    })
+    })
 
       const count = () => {
-
-        setCounter(counter-1)
+        setCounter(tickets - currentData.length)
       }
 
-      const handleChange = (event) => {    
-        setMiejsce({value: event.target.value});  
-        console.log(miejsce)
-      }
+      const selectData = (id, event) =>{
+        let isSelected = event.currentTarget.checked;
+        if(isSelected){
+            if(currentData.length<limit){
+              setCurrendData([...currentData, id])
+            }
+        }
+        else{
+           setCurrendData(currentData.filter((item)=>id!==item))
+        }
+   }
+
 
     return (
         <main>
         <Header/>
-        Miejsca w tej sali
-        <div className='divek'>
-        {orderScreening.room.places.map( place => 
-            <div className='seats' key={place.id}>
-                <input type='checkbox' 
-                onClick={count}
-                onChange={handleChange}
-                />
-                {place.row + 'row'} {place.place + 'place'}
-            </div>
-        )}
-        </div>
+        <div className='screen'>EKRAN</div>
 
-        <div>
-            {counter}
+        <div className='places-in-room'>
+        {orderScreening.room.places.map( place => 
+            <div  className={tablicaMiejsczajetych.includes(place.id) ? 'taken-seats' : 'seats'}  key={place.id}>
+                  <input 
+                  id='mojcheck'
+                  className='place-checkbox'
+                    type="checkbox" 
+                    checked={currentData.indexOf(place.id)>=0}
+                    onChange={selectData.bind(this,place.id)}
+                    disabled={tablicaMiejsczajetych.includes(place.id) ? true : false}
+                    name="select-data"/>
+                    {place.row + 'row'} {place.place + 'place'}
+              </div>
+                
+                        )}</div>
+
+        
+
+
+
+
+        <div className='legenda'>
+          <div className='zajete'>zazjęte miejsce</div>
+          <div className='wolne'>wolne miejsce</div>
+          <div className='wybrane'>wybrane miejsce</div>
         </div>
-        <NavLink to='/cart/sum'><button className='order-button'>Dalej</button></NavLink>
+        
+        <NavLink to='/cart/sum'><button onClick={xd}  className='order-button'>Dalej</button></NavLink>
         </main>
   );
 };

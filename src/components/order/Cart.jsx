@@ -18,8 +18,7 @@ const Cart = () =>  {
     const [sum, setSum] = useState(0);
     const [normalPrice, setNormalPrice] = useState(20);
     const [halfPrice, setHalfPrice] = useState(15);
-    const [screening, setScreening] = useState("");
-
+    
     if(!localStorage.getItem("user")){
         history.push("/")
     }
@@ -27,36 +26,36 @@ const Cart = () =>  {
     useEffect(() => {
         fetch(`http://localhost:8080/api/screenings/${screeningId}`)
           .then((res) => res.json())
-          .then((data) => setScreening(data));
+          .then((data) => updateOrderScreening(data));
       }, []);
 
     const decreaseNormal = () =>{
-        if(normalTickets > 0) setNormalTickets(normalTickets- 1);
-        counter();
+        if(normalTickets > 0) {
+            setNormalTickets(normalTickets- 1);
+            setSum(sum - normalPrice)
+        }
     }
 
     const increaseNormal = () =>{
         setNormalTickets(normalTickets+ 1);
-        counter();
+        setSum(sum + normalPrice)
     }
 
     const decreaseHalf = () =>{
-        if(halfTickets > 0)setHalfTickets(halfTickets- 1);
-        counter();
+        if(halfTickets > 0){
+            setHalfTickets(halfTickets- 1);
+            setSum(sum - halfPrice)
+        }
     }
 
     const increaseHalf = () =>{
         setHalfTickets(halfTickets+ 1);
-        counter();
-    }
-
-    const counter = () => {
-        setSum((normalPrice * normalTickets) + (halfPrice * halfTickets));
+        setSum(sum + halfPrice)
     }
 
     const xd = () => {
-        updateTickets(halfTickets, normalTickets, sum)
-        updateOrderScreening(screening)
+        //updateOrderScreening(screening)
+        updateTickets(halfTickets, normalTickets, sum) 
     }
 
     return (
