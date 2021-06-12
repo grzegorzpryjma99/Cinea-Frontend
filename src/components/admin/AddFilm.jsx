@@ -4,8 +4,8 @@ import { useDispatch } from "react-redux";
 import axios from 'axios';
 import {Image} from 'cloudinary-react';
 
-import "../Signin.css"
-import "./Admin.css"
+import "../../style/Signin.css"
+import "../../style/Admin.css"
 
 const AddFilm = () => {
  
@@ -38,6 +38,9 @@ const AddFilm = () => {
           time: "",
           releaseDate: "",
           imageURL: "",
+          originalTitle: "",
+          director: "",
+          staff: ""
         },
         onSubmit: (values, {resetForm}) =>  {
 
@@ -47,9 +50,12 @@ const AddFilm = () => {
                 title: values.title,
                 description: values.description,
                 trailer: values.trailer,
-                time: values.time,
+                time: values.time+':00',
                 releaseDate: values.date,
                 imageURL: imageUrl,
+                originalTitle: values.originalTitle,
+                director: values.director,
+                staff: values.staff,
           }
           };
           const xd = JSON.stringify(form)
@@ -58,11 +64,12 @@ const AddFilm = () => {
           , 'Content-Length' : '1000' }})
           console.log(res);
           resetForm();
+          alert('Film został dodany')
         },
       });
 
   return (
-    <section>
+    <section className='container-admin'>
         <h1 class='register-header'>Dodaj film</h1>
         <div class='container'>
         <button onClick={uploadImage}>upload</button>
@@ -109,6 +116,7 @@ const AddFilm = () => {
 
           <input
             id='time'
+            type='time'
             name='time'
             placeholder='czas trwania'
             onChange={formik.handleChange}
@@ -119,6 +127,34 @@ const AddFilm = () => {
             type="date" 
             id="date" 
             name='date'
+            onChange={formik.handleChange}
+           />
+
+          <input 
+            placeholder="oryginalny tytuł"
+            id="originalTitle" 
+            name='originalTitle'
+            onChange={formik.handleChange}
+           />
+
+          <input 
+            placeholder="genre" 
+            id="genre" 
+            name='genre'
+            onChange={formik.handleChange}
+           />
+
+          <input 
+            placeholder="director" 
+            id="director" 
+            name='director'
+            onChange={formik.handleChange}
+           />
+
+          <input 
+            placeholder="staff" 
+            id="staff" 
+            name='staff'
             onChange={formik.handleChange}
            />
         

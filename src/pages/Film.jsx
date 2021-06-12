@@ -1,8 +1,8 @@
 import React, { Component, useContext, useEffect, useState } from 'react'
 import { BrowserRouter, Link ,useParams} from 'react-router-dom'
-import Header from '../home/Header'
-import Footer from '../home/Footer.jsx'
-import FilmsDetails from './FilmDetails.jsx'
+import Header from '../components/home/Header'
+import Footer from '../components/home/Footer.jsx'
+import FilmsDetails from '../components/filmpage/FilmDetails.jsx'
 
 
 
@@ -20,7 +20,7 @@ useEffect(() => {
     return(
       <BrowserRouter>
       <Header />
-      {film ? <FilmsDetails dane = {film}/> : <p>Ładowanie...</p> }
+      {film ? <FilmsDetails dane = {film}/> : <p class="preloader"></p> }
       <Footer/>
     </BrowserRouter>
     );

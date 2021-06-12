@@ -1,6 +1,6 @@
 import React, {useState, useRef} from "react";
-import logo from './logo.svg'
-import "./Signin.css"
+import logo from '../image/logo.svg'
+import "../style/Signin.css"
 import AuthService from "../services/auth.service";
 import { NavLink, useHistory } from "react-router-dom";
 

@@ -27,6 +27,7 @@ html, body {
 .container-film{
     display: flex;
     flex-direction: row;
+    width: 85%;
 }
 
 .details{
@@ -43,6 +44,42 @@ html, body {
 
 .cinema-location{
     align-items: center;
+}
+
+.full-details{
+    width: 65vw;    
+    padding: 4em;
+}
+
+.full-details > h1{
+    text-align: center; 
+}
+
+.blur {
+    filter: blur(4px);
+}
+
+.popup-btn{
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 40px;
+    margin: 10px;
+    position: fixed;
+    color: #FF3A3A;
+}
+
+.popup{
+    background-color: white;
+    width: 65vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    height: 70vh;
+    overflow: auto;
+    top: 15vh;
+    left: 18vw;
+    border-radius: 14px;
 }
 
 .title{
@@ -105,6 +142,12 @@ font-weight: 300;
     font-size: 50px;
 }
 
+iframe{
+    max-width: 55%;
+    height: 500px;
+    width: -moz-available;
+}
+
 .time-icon{
     display: flex;
     justify-content: center;
@@ -135,6 +178,13 @@ font-weight: 300;
 
 .container-film{
     flex-direction: column;
+    width: 100%;
+    
+}
+
+.full-details {
+    width: 98vw;
+    padding: 0;
 }
 
 .details{
@@ -160,6 +210,12 @@ font-weight: 300;
 }
 
 iframe{
-    width: 98vw;
+    max-width: 90%;
+height: 380px;
+}
+
+.popup{
+    left: 6vw;
+    width: 90vw;
 }
 }

@@ -1,5 +1,5 @@
 import React, { useState , useContext} from 'react';
-import "./MainPage.css"
+import "../../style/MainPage.css"
 import { ScreeningContext } from "../admin/AdminPanel"
 import { Link } from 'react-router-dom'
 

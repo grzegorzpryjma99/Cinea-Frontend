@@ -89,6 +89,7 @@ a:hover{
     height: 2em;
     cursor: pointer;
     font-size: 30px;
+    margin: 10px;
 }
 
 .login-register-buttons-mobile>button{
@@ -158,10 +159,17 @@ a:hover{
 }
 .repertoire-buttons{
     text-align: center;
+    padding: 2em;
     justify-content: center;
     display: flex;
     align-items: center;
     flex-direction: row;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.selectionContainer{
+    margin: 5px;
 }
 .repertuar{
     text-align: center;
@@ -181,6 +189,8 @@ a:hover{
 
 .short-description{
     padding: 2em;
+    overflow: auto;
+    height: 64px;
 }
 .operation-buttons{
     margin: auto;
@@ -216,6 +226,45 @@ a:hover{
     border: 0;
     width: 15vw;
     height: 3em;
+}
+
+
+.c-or span {
+
+    position: relative;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #070705;
+    font-weight: inherit;
+font-size: 30px;
+letter-spacing: 5px;
+}
+.c-or span::before, .c-or span::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    height: 1px;
+    display: block;
+    width: 1000px;
+}
+.c-or {
+    overflow: hidden;
+    margin: 20px auto;
+    line-height: 1;
+    text-align: center;
+    width: 85vw;
+}
+
+.c-or span::before {
+    right: calc(100% + 20px);
+}
+
+
+.c-or span::after {
+
+    left: calc(100% + 20px);
+
 }
 
 /*footer*/
@@ -272,7 +321,7 @@ footer{
     box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
     width: 190px;
     height: 45px;
-    margin-right: 20px;
+    margin: 5px;
   }
 
 .order-button{
@@ -362,6 +411,10 @@ width: 80px;
         width: 100%;
         background-color:#C4C4C4;
         justify-content: center;
+    }
+
+    .repertoire-buttons{
+        width: 100%;
     }
 
     .repertoire {

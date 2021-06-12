@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import Header from '../home/Header';
-import "./order.css"
-import plakat from "../platak.svg"
+import "../../style/order.css"
 import {ScreeningContext} from '../admin/AdminPanel'
 import {Image} from 'cloudinary-react';
 import axios from 'axios';
@@ -46,7 +45,7 @@ const Sum = () =>  {
         //orderId: 9
       }
       console.log(JSON.stringify(createTickets), 'bilecik do wyslania')
-      //const res = axios.post(`http://localhost:8080/api/order/tickets/add`, JSON.stringify(createTickets),{headers: {'Content-Type': 'application/json' }})
+      const res = axios.post(`http://localhost:8080/api/order/tickets/add`, JSON.stringify(createTickets),{headers: {'Content-Type': 'application/json' }})
       //console.log(res);
      
       // console.log('tera order')

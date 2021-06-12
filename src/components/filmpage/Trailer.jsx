@@ -29,7 +29,7 @@ class Trailer extends Component {
   render() {
     return (
     <div>
-      <div className="max-width-1024">
+      <div >
         <div className="embed-responsive embed-responsive-16by9" id="player">
         </div>
       </div>

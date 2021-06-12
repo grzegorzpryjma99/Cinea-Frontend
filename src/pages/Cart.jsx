@@ -1,11 +1,11 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { NavLink, useHistory, useParams } from "react-router-dom";
-import Header from '../home/Header';
-import "./order.css"
+import Header from '../components/home/Header';
+import "../style/order.css"
 import {Switch, Route, BrowserRouter as Router } from "react-router-dom";
-import Sum from "./Sum";
+import Sum from "../components/order/Sum";
 import { FiPlus, FiMinus } from "react-icons/fi";
-import {ScreeningContext} from '../admin/AdminPanel'
+import {ScreeningContext} from '../components/admin/AdminPanel'
 
 const Cart = () =>  {
 

@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from 'axios'
 import Slider from "react-slick";
-import "./Slider.css"
+import "../../style/Slider.css"
 import {Image} from 'cloudinary-react';
 
 
@@ -33,7 +33,8 @@ export default class Responsive extends Component {
       className: "center",
       centerMode: true,
       dots: true,
-      infinite: true,
+    //  infinite: true,
+      infinite: this.state.data.length > 2,
       autoplay: true,
       centerPadding: "0px",
       slidesToShow: 3,
@@ -67,7 +68,7 @@ export default class Responsive extends Component {
     return (
       <div className='slider'>
         <Slider {...settings}>
-        {filmList ? filmList : <p>Ładowanie...</p>}
+        {filmList ? filmList : <p class="preloader"></p>}
         </Slider>
       </div>
     );

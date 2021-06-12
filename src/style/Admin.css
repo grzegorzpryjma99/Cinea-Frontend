@@ -25,6 +25,10 @@
     margin: 1em;
     justify-content: space-between;
 }
+.container{
+    border: 1px solid;
+    padding: 2em;
+}
 
 .filmEditBox{
     text-align: center;

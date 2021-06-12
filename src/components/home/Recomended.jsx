@@ -1,6 +1,6 @@
 import React from 'react';
-import "./MainPage.css"
-import Film from '../filmpage/Film'
+import "../../style/MainPage.css"
+import Film from '../../pages/Film'
 import { Switch, Route } from 'react-router-dom'
 import Slider from "./Slider";
 

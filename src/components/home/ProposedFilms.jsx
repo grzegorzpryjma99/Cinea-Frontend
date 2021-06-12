@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { NavLink } from 'react-router-dom'
-import "./MainPage.css"
-import plakat from './platak.svg'
+import "../../style/MainPage.css"
 import axios from 'axios'
 import { Component } from 'react';
 import {Image} from 'cloudinary-react';

@@ -1,7 +1,7 @@
 import React ,{useState}from "react";
 import { NavLink, useHistory } from "react-router-dom";
-import "./Signin.css"
-import logo from './logo.svg'
+import "../style/Signin.css"
+import logo from '../image/logo.svg'
 import AuthService from "../services/auth.service";
 
 const Signin = (props) => {

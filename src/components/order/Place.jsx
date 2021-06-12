@@ -1,6 +1,6 @@
 import React, { useState , useEffect, useContext} from 'react';
 import Header from '../home/Header';
-import "./order.css"
+import "../../style/order.css"
 import { ScreeningContext } from "../admin/AdminPanel"
 import { NavLink } from 'react-router-dom';
 import { Placeholder } from 'cloudinary-react';

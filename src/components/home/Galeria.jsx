@@ -1,19 +1,17 @@
 import React, {useState, useContext} from 'react';
 import {  } from 'react-redux';
-import { Link, NavLink, useHistory } from 'react-router-dom'
-import logo from '../logo.svg'
-import "./MainPage.css"
-import AuthService from "../../services/auth.service";
-import { FaUser } from "react-icons/fa";
-import Hamburger from 'hamburger-react';
-import {Image} from 'cloudinary-react';
-import { ScreeningContext } from '../admin/AdminPanel'
+import "../../style/MainPage.css"
 import image2 from '../../image/image2.svg'
 import image1 from '../../image/image1.svg'
 import image3 from '../../image/image3.svg'
 import image4 from '../../image/image4.svg'
 import image5 from '../../image/image5.svg'
+
 const Galeria = () =>  {
+
+ const functions = () => {
+    ('.galery-image').lazy();
+};
 
     return (
         
@@ -36,6 +34,14 @@ const Galeria = () =>  {
                 <img className='galery-image' src={image5}></img>
                 <img className='galery-image' src={image1}></img>
                 <img className='galery-image' src={image2}></img>
+                {/* <MyImage /> */}
+
+
+
+
+
+
+                
               </div>
   );
 };

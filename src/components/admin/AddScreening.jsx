@@ -11,8 +11,8 @@ const AddScrenning= (props) => {
   const [room, setRoom] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-
-
+console.log(filmy)
+console.log(props)
       function SelectionList(param) {
         return <div className='selectionContainer'>
           <select className='selection' onChange={(e) => {const film = e.target.value; setFilm(film);}}>
@@ -67,7 +67,7 @@ const AddScrenning= (props) => {
       }
 
   return (
-    <section>
+    <section className='container-admin'>
         <h1 class='register-header'>Dodaj seans</h1>
         <div class='container'>
         <form  className='register-form'  > 

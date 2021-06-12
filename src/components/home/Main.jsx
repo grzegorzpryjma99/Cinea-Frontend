@@ -1,11 +1,8 @@
 import React, {useContext, useState} from 'react';
-import { Switch, Route, useParams, Link} from 'react-router-dom'
-import "./MainPage.css"
+import "../../style/MainPage.css"
 import Recomended from "./Recomended";
-import Repertoire from "./Repertoire"
 import Films from './Films'
 import { ScreeningContext } from '../admin/AdminPanel'
-import {Image} from 'cloudinary-react';
 import Galeria from './Galeria';
 
 
@@ -15,7 +12,7 @@ const Main = () =>  {
   const [film, setFilm] = useState("");
 
   const now = new Date();
-  const [date, setDate]= useState(`${now.getFullYear()}-${0}${now.getMonth()+1}-${0}${now.getDate()}`)
+  const [date, setDate]= useState(`${now.getFullYear()}-${0}${now.getMonth()+1}-${now.getDate()}`)
  
   function SelectionList(param) {
     return <div className='selectionContainer'>
@@ -37,10 +34,11 @@ const Main = () =>  {
   return (
             <div>
               <Recomended />
-              <span id="seanse"></span>
-              <div className="repertoire">
-                <h1 className='repertuar'>Repertuar</h1>
+              
+              <div className="c-or">
+              <span id="seanse">Repertuar</span>
                 <div className="repertoire-buttons">
+                  {/* <h1>Filtruj</h1> */}
                     <input 
                     className='choose-date'
                     value={date}
@@ -52,10 +50,9 @@ const Main = () =>  {
               
               <Films data={date} film={film}/>
               
-              <span id="gallery"></span>
-              <div className='repertoire'>
               
-              <h1 className='repertuar'>Galeria</h1>
+              <div className='c-or'>
+              <span  id="gallery">Galeria</span>
               </div>
               
               {/* <div className='gallery'>

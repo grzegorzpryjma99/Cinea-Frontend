@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {  } from 'react-redux';
-import { Link, NavLink, useHistory } from 'react-router-dom'
-import logo from '../logo.svg'
-import "./MainPage.css"
+import {useHistory } from "react-router-dom";
+import logo from '../../image/logo.svg'
+import "../../style/MainPage.css"
 import AuthService from "../../services/auth.service";
 import { FaUser } from "react-icons/fa";
 import Hamburger from 'hamburger-react';
@@ -29,10 +29,13 @@ const Header = () =>  {
 
     return (
         <header className='haeder'>
+        {/* <NavLink to='/main-page'><img src={logo} className="logo"/></NavLink> */}
         <img src={logo} className="logo"/>
         <div className='href-div'>
         <a className='gallery-btn' href="/main-page#gallery">Galeria</a>
         <a className='gallery-btn' href="/main-page#seanse">Seanse</a>
+        <a className='gallery-btn' href="/main-page#seanse">Placeholder</a>
+        <a className='gallery-btn' href="/main-page#seanse">Placeholder</a>
         </div>
         
         <div className='login-register-buttons'>

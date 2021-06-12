@@ -1,7 +1,7 @@
 import React, {createContext, useEffect, useState}from "react";
 import { useHistory } from "react-router-dom";
-import "../Signin.css"
-import "./Admin.css"
+import "../../style/Signin.css"
+import "../../style/Admin.css"
 
 export const ScreeningContext = createContext();
 
@@ -13,6 +13,7 @@ export const AdminPanel = (props) => {
   const history = useHistory();
 
   const [films, setFilms] = useState([]);  //wszystkie filmy
+  const [rooms, setRooms] = useState([]);  //wszystkie sale
   const [screenings, setScreenings] = useState([]); //wszystkie seanse
 
 
@@ -94,11 +95,11 @@ export const AdminPanel = (props) => {
       .then((data) => setFilms(data));
   }, []);
 
-  // useEffect(() => {
-  //   fetch("http://localhost:8080/api/rooms/")
-  //     .then((res) => res.json())
-  //     .then((data) => setRooms(data));
-  // }, []);
+  useEffect(() => {
+    fetch("http://localhost:8080/api/rooms/")
+      .then((res) => res.json())
+      .then((data) => setRooms(data));
+  }, []);
 
   useEffect(() => {
     fetch("http://localhost:8080/api/screenings/")
@@ -109,7 +110,7 @@ export const AdminPanel = (props) => {
   return (
     <ScreeningContext.Provider 
       value={{updateTickets, updateOrderScreening, updateOrderPlaces, 
-        seanse: screenings, filmy: films, tickets: tickets,
+        seanse: screenings, filmy: films, tickets: tickets, rooms: rooms,
         orderScreening: orderScreening, orderPlaces: orderPlaces, 
         tablicaHalf: tablicaHalf, tablicaNormal: tablicaNormal, normal:normal, half:half, sum: sum}}
       {...props}/>

@@ -1,6 +1,6 @@
 import React from 'react';
-import "./MainPage.css"
-import mapka from './mapka.svg'
+import "../../style/MainPage.css"
+import mapka from '../../image/mapka.svg'
 const Footer = () =>  {
 
     const togglePanel = () => {
