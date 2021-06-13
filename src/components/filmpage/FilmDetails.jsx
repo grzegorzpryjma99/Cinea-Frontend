@@ -22,12 +22,13 @@ const FilmDetails = (dane) =>{
             ) : null}
             <section className= {popup ? 'blur' : null}>
                 
-                <h1 className='title'>{dane.dane.filmDetails.title}</h1>
+                
                 <div className='container-film'>
                     <div className='photo'>
                     <Image className='film-image' cloudName="dhdzistwc" publicId={dane.dane.filmDetails.imageURL}/>
                     </div>
                     <div className='details'>
+                    <h1 className='title'>{dane.dane.filmDetails.title}</h1>
                         <div className='data-time'>
                             <div className='date'>
                                 <div className='data-icon'>
@@ -49,7 +50,7 @@ const FilmDetails = (dane) =>{
                             </div>
                         </div>
                         <div className='description'>
-                            <p>{dane.dane.filmDetails.description}</p>
+                            {dane.dane.filmDetails.description}
                         </div>
                         <button  className='booking-button' onClick={handleClick}> Kup bilety</button>
 

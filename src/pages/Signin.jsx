@@ -1,7 +1,7 @@
 import React ,{useState}from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import "../style/Signin.css"
-import logo from '../image/logo.svg'
+import logo from '../image/logo2.svg'
 import AuthService from "../services/auth.service";
 
 const Signin = (props) => {
@@ -53,6 +53,7 @@ const Signin = (props) => {
     <section>
       <NavLink to='/main-page'><img src={logo} className="logo-login"/></NavLink>
         <div className='container-login'>
+        <h1 class='register-header'>Logowanie</h1>
         <form  onSubmit={handleLogin}>
         <label htmlFor='email'></label>
           <input

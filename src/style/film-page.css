@@ -9,7 +9,7 @@
 }
 
 .logo{
-    margin-left: 0;
+    margin: 7px;
 }
 
 
@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: row;
     width: 85%;
+    margin-top: 50px;
 }
 
 .details{
@@ -63,7 +64,6 @@
 
 .popup{
     background-color: white;
-    width: 65vw;
     position: absolute;
     top: 0;
     left: 0;
@@ -71,7 +71,8 @@
     height: 70vh;
     overflow: auto;
     top: 15vh;
-    left: 18vw;
+    left: 12vw;
+    width: 77vw;
     border-radius: 14px;
 }
 
@@ -79,6 +80,8 @@
     text-align: center;
     padding: 0.5em;
     font-size: 28px;
+    font-family: 'Cunia', sans-serif;
+    color: #494848;
 }
 
 .photo{
@@ -99,7 +102,11 @@ font-weight: 300;
 }
 
 .description{
-    padding: 1em;
+    padding: 2em;
+    height: 64px;
+    overflow: clip;
+    width: 35vw;
+    text-align: justify;
 }
 
 .date{
@@ -119,7 +126,10 @@ font-weight: 300;
     border: 0;
     width: 15vw;
     height: 3em;
-
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
 }
 
 .trailer{
@@ -179,6 +189,11 @@ iframe{
 .full-details {
     width: 98vw;
     padding: 0;
+}
+
+.description{
+    width: 77vw;
+    height: auto;
 }
 
 .details{

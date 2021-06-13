@@ -1,5 +1,5 @@
 import React, {useState, useRef} from "react";
-import logo from '../image/logo.svg'
+import logo from '../image/logo2.svg'
 import "../style/Signin.css"
 import AuthService from "../services/auth.service";
 import { NavLink, useHistory } from "react-router-dom";
@@ -67,8 +67,9 @@ const Signup = () => {
   return (
     <section>
        <NavLink to='/main-page'><img src={logo} className="logo-login"/></NavLink>
-        <h1 class='register-header'>REJESTRACJA</h1>
+        
         <div class='container-login'>
+        <h1 class='register-header'>REJESTRACJA</h1>
         <form  className='register-form' onSubmit={handleRegister}>
           <input
             id='username'

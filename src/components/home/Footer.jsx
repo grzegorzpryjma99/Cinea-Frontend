@@ -15,7 +15,7 @@ const Footer = () =>  {
             <p>W tym momencie jest drugą największą siecią kinową na świecie obejmującą 9 518 sal w 790 kinach. Cineworld działa w 10 krajach - w Stanach Zjednoczonych, Wielkiej Brytanii, Polsce, Irlandii, Izraelu, Czechach, Bułgarii, Rumunii, na Węgrzech i na Słowacji. Rocznie organizuje 14,5 miliona projekcji filmowych, które wyświetlane są ponad 300 milionom widzów.</p>
         </div>
         <div className='contact'>
-            <h2>Kontakt</h2>
+            <h1>Kontakt</h1>
             <p className='phone' ><FiPhone />  123456789</p>
             <p className='phone' ><FiMail />  cineaapp@gmail.com</p>
             <div className='social'>

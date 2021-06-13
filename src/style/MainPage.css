@@ -1,3 +1,4 @@
+@import url('http://fonts.cdnfonts.com/css/cunia');
 *{
     font-style: normal;
     font-weight: normal;
@@ -27,7 +28,6 @@
     background-color: transparent;
     border: 0;
     outline: 0;
-    height: 2em;
     color: black;
     cursor: pointer;
     font-size: 30px;
@@ -35,14 +35,19 @@
     
 }
 .href-div{
-    margin-top: 27px;
     display: flex;
     flex-direction: row;
-    margin-left: 1em;
+    align-items: center;
 }
 
 .href-div>a{
     margin-left: 1em;
+    font-weight: inherit;
+font-size: 25px;
+letter-spacing: 3px;
+text-transform: uppercase;
+font-family: 'Cunia', sans-serif;
+    color: #494848;
 }
 .gallery-div{
     text-align: center;
@@ -73,16 +78,24 @@ a:hover{
     outline: 0;
     height: 2em;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 25px;
     margin: 10px;
+    font-weight: inherit;
+letter-spacing: 3px;
+text-transform: uppercase;
+font-family: 'Cunia', sans-serif;
+    color: #494848;
 }
 
 .login-register-buttons-mobile>button{
     background-color: transparent;
     border: 0;
     outline: 0;
-    height: 2em;
-    font-size: 30px;
+    font-size: 27px;
+    text-transform: uppercase;
+    font-family: 'Cunia', sans-serif;
+    color: #494848;
+    margin: 10px;
 }
 
 .cinema-location{
@@ -112,8 +125,8 @@ a:hover{
 }
 
 .phone{
-    font-size: 25px;
-    margin: 5px;
+    font-size: 20px;
+    margin: 10px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -123,6 +136,7 @@ a:hover{
     flex-direction: row;
     padding: 3em;
     height: 440px;
+    width: 70vw;
 }
 
 .about-us>p{
@@ -168,6 +182,7 @@ a:hover{
     padding: 2em;
     justify-content: center;
     display: flex;
+    margin-top: 15px;
     align-items: center;
     flex-direction: row;
     margin-left: 0 !important;
@@ -192,11 +207,27 @@ a:hover{
     width: 4em;
     font-weight: bold;
 }
+.about-us > h1{
+    text-transform: uppercase;
+    font-family: 'Cunia', sans-serif;
+    color: #494848;
+}
 
+.about-us > p {
+    text-align: justify;
+}
+
+.contact > h1{
+    text-transform: uppercase;
+    font-family: 'Cunia', sans-serif;
+    color: #494848;
+}
 .short-description{
     padding: 2em;
-    overflow: auto;
     height: 64px;
+    overflow: clip;
+    width: 35vw;
+    text-align: justify;
 }
 .operation-buttons{
     margin: auto;
@@ -240,10 +271,11 @@ a:hover{
     position: relative;
     font-weight: normal;
     text-transform: uppercase;
-    color: #070705;
     font-weight: inherit;
 font-size: 30px;
 letter-spacing: 5px;
+font-family: 'Cunia', sans-serif;
+    color: #494848;
 }
 .c-or span::before, .c-or span::after {
     content: '';
@@ -256,7 +288,7 @@ letter-spacing: 5px;
 }
 .c-or {
     overflow: hidden;
-    margin: 20px auto;
+    margin: 50px auto 50px;
     line-height: 1;
     text-align: center;
     width: 85vw;
@@ -363,6 +395,21 @@ width: 80px;
     display: flex;
     margin-top: 0;
     flex-direction: column;
+    text-align: center;
+    
+}
+
+.logo-mobile{
+    height: 70px;
+    margin-top: 10px;
+}
+
+.href-div-mobile > a{
+    text-transform: uppercase;
+    font-family: 'Cunia', sans-serif;
+    color: #494848;
+    font-size: 27px;
+    margin: 10px;
 }
 .hamburger-react{
     display: none;
@@ -373,6 +420,16 @@ width: 80px;
     cursor: pointer;
 }
 
+.repertoire-info{
+    text-align: center;
+    margin: 10vh;
+    font-size: 20px;
+letter-spacing: 5px;
+font-family: 'Cunia', sans-serif;
+color: #494848;
+margin-bottom: 15vh;
+opacity: 80%;
+}
 
 @media only screen and (max-device-width: 420px){
     .logo{
@@ -417,7 +474,7 @@ width: 80px;
         display: flex;
         flex-direction: column;
         position: absolute;
-        height: 60vh;
+        height: 63vh;
         width: 100%;
         background-color:#C4C4C4;
         justify-content: center;
@@ -451,6 +508,8 @@ width: 80px;
         flex-direction: column;
         padding: 1.5em;
         height: auto;
+        width: auto;
+        
     }
 
     .screening-image {
@@ -493,7 +552,7 @@ width: 80px;
 
     .hamburger-react{
         display: flex;
-        top: 5px;
+        align-self: center;
     }
 
     

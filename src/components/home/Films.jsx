@@ -70,13 +70,13 @@ if(!data.data){
 
     return (
         <div>
-            {result? result.map( seans =>
+            {result ? result.map( seans =>
             <div className='the-film' key={seans.id}>
                 <div>
                     <Image className='screening-image'  cloudName="dhdzistwc" publicId={seans.film.filmDetails.imageURL}/>
                 </div>
                 <div className='film-details'>
-                    <h1>{seans.film.filmDetails.title}</h1>
+                    <h1 className='title'>{seans.film.filmDetails.title}</h1>
                     <div class='time'>
                         <NavLink to={`/cart/${seans.id}`}><button  className='monday' >{seans.time.slice(0,5)}</button></NavLink>
                     </div>
@@ -90,7 +90,8 @@ if(!data.data){
                         {/* <button className='monday' onClick={togglePanel}>Rezerwuj bilety</button> */}
                     </div>
                 </div>
-            </div>): <p class="preloader" ></p>}
+            </div>) : <p class="preloader" > </p>}
+            {result.length > 0 ? null : <p className='repertoire-info'>Brak seansów</p>}
         </div>
   );
 };
