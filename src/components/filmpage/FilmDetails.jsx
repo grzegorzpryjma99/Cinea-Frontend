@@ -64,17 +64,21 @@ const FilmDetails = (dane) =>{
                 
 
                 <div>
-                        <h1 className="title">Zobacz zwiastun</h1>
+                <div className='c-or'>
+              <span  id="trailer">Zobacz zwiastun</span>
+              </div>
                         <div className='trailer'>
                             <Trailer id={dane.dane.filmDetails.trailer}/>
                         </div>
                         <div className='full-details'>
-                            <h1>Szczegóły</h1>
-                            <ul>
-                                <h3>Tytuł oryginalny:   {dane.dane.filmDetails.originalTitle}</h3>
-                                <h3>Gatunek filmu:      {dane.dane.filmDetails.category}</h3>
-                                <h3>Reżyser:            {dane.dane.filmDetails.director}</h3>
-                                <h3>Obsada:             {dane.dane.filmDetails.staff}</h3>
+                        <div className='c-or'>
+              <span  id="details">Szczegóły</span>
+              </div>
+                            <ul className='list'>
+                                <h2>Tytuł oryginalny:   {dane.dane.filmDetails.originalTitle}</h2>
+                                <h2>Gatunek filmu:      {dane.dane.filmDetails.category}</h2>
+                                <h2>Reżyser:            {dane.dane.filmDetails.director}</h2>
+                                <h2>Obsada:             {dane.dane.filmDetails.staff}</h2>
                             </ul>
 
                         </div>

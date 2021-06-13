@@ -50,6 +50,7 @@ const Place = () =>  {
     return (
         <main>
         <Header/>
+        <div className='cart-section'>
         <div className='screen'>EKRAN</div>
 
         <div className='places-in-room'>
@@ -63,7 +64,7 @@ const Place = () =>  {
                     onChange={selectData.bind(this,place.id)}
                     disabled={tablicaMiejsczajetych.includes(place.id) ? true : false}
                     name="select-data"/>
-                    {place.row + 'row'} {place.place + 'place'}
+                    {/* {place.row + 'row'} {place.place + 'place'} */}
               </div>
                 
                         )}</div>
@@ -74,12 +75,13 @@ const Place = () =>  {
 
 
         <div className='legenda'>
-          <div className='zajete'>zazjęte miejsce</div>
-          <div className='wolne'>wolne miejsce</div>
-          <div className='wybrane'>wybrane miejsce</div>
+          <div className='zajete'>Zajęte miejsce</div>
+          <div className='wolne'>Wolne miejsce</div>
+          <div className='wybrane'>Wybrane miejsce</div>
         </div>
         
         <NavLink to='/cart/sum'><button onClick={xd}  className='order-button'>Dalej</button></NavLink>
+        </div>
         </main>
   );
 };

@@ -2,8 +2,6 @@ import React, { useState, useContext, useEffect } from 'react';
 import { NavLink, useHistory, useParams } from "react-router-dom";
 import Header from '../components/home/Header';
 import "../style/order.css"
-import {Switch, Route, BrowserRouter as Router } from "react-router-dom";
-import Sum from "../components/order/Sum";
 import { FiPlus, FiMinus } from "react-icons/fi";
 import {ScreeningContext} from '../components/admin/AdminPanel'
 
@@ -63,10 +61,10 @@ const Cart = () =>  {
         <Header/>
         
         <section className='cart-section'>
-        <h className="cart-header">Wybierz bilety</h>
+        <h1 className="cart-header">Wybierz bilety</h1>
 
             <div className='normal-ticket'>
-                <div>normalny {normalPrice + 'PLN'}</div>
+                <h1>Bilet normalny</h1>{normalPrice + 'PLN'}
             <div className='quantity'>
                 <button className='increment' onClick={increaseNormal}><FiPlus/></button>
                 <input className='ticket-input' placeholder={normalTickets}></input>
@@ -75,8 +73,8 @@ const Cart = () =>  {
             </div>
             
 
-            <div className='half-price-ticket'>
-                <div>ulgowy {halfPrice + 'PLN'}</div>
+            <div className='normal-ticket'>
+            <h1>Bilet ulgowy</h1> {halfPrice + 'PLN'}
             
             <div className='quantity'>
                 <button className='increment' onClick={increaseHalf}><FiPlus/></button>
@@ -85,8 +83,8 @@ const Cart = () =>  {
             </div>
             </div>
             <div className='total'>
-                <h>Podsumowanie</h>
-                <p>{sum + ' PLN '}</p>
+                <h2>Podsumowanie</h2>
+                <p className='total-sum'>{sum + ' PLN '}</p>
                 {/* {normalTickets + 'normalny '} 
                 {halfTickets + 'ulgowy '} */}
             </div>

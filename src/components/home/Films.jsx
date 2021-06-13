@@ -78,7 +78,7 @@ if(!data.data){
                 <div className='film-details'>
                     <h1>{seans.film.filmDetails.title}</h1>
                     <div class='time'>
-                        <NavLink to={`/cart/${seans.id}`}><button  className='monday' >{seans.time}</button></NavLink>
+                        <NavLink to={`/cart/${seans.id}`}><button  className='monday' >{seans.time.slice(0,5)}</button></NavLink>
                     </div>
 
                     <div className='short-description'>

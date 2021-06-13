@@ -34,8 +34,8 @@ const Header = () =>  {
         <div className='href-div'>
         <a className='gallery-btn' href="/main-page#gallery">Galeria</a>
         <a className='gallery-btn' href="/main-page#seanse">Seanse</a>
-        <a className='gallery-btn' href="/main-page#seanse">Placeholder</a>
-        <a className='gallery-btn' href="/main-page#seanse">Placeholder</a>
+        {/* <a className='gallery-btn' href={`#trailer`}>Zwiastun</a>
+        <a className='gallery-btn' href="#details">Szczegóły</a> */}
         </div>
         
         <div className='login-register-buttons'>

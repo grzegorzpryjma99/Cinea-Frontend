@@ -11,6 +11,7 @@ const Sum = () =>  {
 
 
   const tmp = []
+  const tmp2 = []
 
   normal.forEach(function(item) {
     tmp.push(item);
@@ -41,9 +42,10 @@ const Sum = () =>  {
         screening:{
           id: item.screening.id
         },
-        placeId: item.placeId
-        //orderId: 9
+        placeId: item.placeId,
+        userId: localStorage.getItem('id')
       }
+      tmp2.push(createTickets);
       console.log(JSON.stringify(createTickets), 'bilecik do wyslania')
       const res = axios.post(`http://localhost:8080/api/order/tickets/add`, JSON.stringify(createTickets),{headers: {'Content-Type': 'application/json' }})
       //console.log(res);
@@ -59,7 +61,9 @@ const Sum = () =>  {
 
       
     });
-    
+    alert('zarezerwowano, sprawdz email');
+    console.log(JSON.stringify(tmp2), 'wszyskie wyslane');
+    const res = axios.post(`http://localhost:8080/api/order/sendemail`, JSON.stringify(tmp2),{headers: {'Content-Type': 'application/json' }})
   }
 
   
@@ -73,7 +77,7 @@ const Sum = () =>  {
         <main>
         <Header/>
         <section className='sum-section'>
-        <h className='cart-header'>Sprawdź swoje zamówienie</h>
+        <h1 className='cart-header'>Sprawdź swoje zamówienie</h1>
         {normal.map( ticket => 
             <div className='ticket' key={ticket.id}>
               <div className='div-ticket-image'>
@@ -89,7 +93,7 @@ const Sum = () =>  {
                 {ticket.typeTicket}
               </div>
               <div>
-              {ticket.screening.time}
+              {ticket.screening.time.slice(0,5)}
               </div>
               <div>
                 {ticket.price} PLN
@@ -112,7 +116,7 @@ const Sum = () =>  {
               {ticket.typeTicket}
               </div>
               <div>
-              {ticket.screening.time}
+              {ticket.screening.time.slice(0,5)}
               </div>
               <div>
               {ticket.price} PLN
@@ -122,8 +126,8 @@ const Sum = () =>  {
         
 
           <div className='total'>
-            <h>Podsumowanie</h>
-            <p>{sum} PLN</p>
+            <h2>Podsumowanie</h2>
+            <p className='total-sum'>{sum} PLN</p>
           </div>
 
           <button onClick={rezerwuj} className='order-button'>Rezerwuj</button>

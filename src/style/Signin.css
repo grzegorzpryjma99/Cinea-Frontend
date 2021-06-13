@@ -61,7 +61,7 @@ html, body {
 .login-button{
     margin: 1em;
     width: 15em;
-    background-color: #FF4747;
+    background-color: #f27b13;
     border-radius: 0.05em;
     border: 0;
     color: white;
@@ -71,7 +71,7 @@ html, body {
 .register-button{
     margin: 1em;
     width: 15em;
-    background-color: #FF4747;
+    background-color: #f27b13;
     border-radius: 0.05em;
     border: 0;
     color: white;

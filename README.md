@@ -4,9 +4,8 @@ Cinema booking system. Web application for booking tickets at the cinema. Client
 
 ## Technologies
 * HTML5
-* CSS#
+* CSS3
 * JavaScript
-* Redux
 * React
 
 ## Check more

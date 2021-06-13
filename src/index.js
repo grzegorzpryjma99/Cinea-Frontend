@@ -7,18 +7,6 @@ import store from "./store.js";
 
 
 ReactDOM.render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>,
-  // document.getElementById('root')
-
-
-
-
-
-
-
-
   <Provider store={store}>
     <App />
   </Provider>,

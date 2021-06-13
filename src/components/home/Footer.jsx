@@ -1,6 +1,7 @@
 import React from 'react';
 import "../../style/MainPage.css"
 import mapka from '../../image/mapka.svg'
+import {FiMail, FiPhone, FiInstagram,FiFacebook, FiTwitter} from "react-icons/fi";
 const Footer = () =>  {
 
     const togglePanel = () => {
@@ -11,17 +12,22 @@ const Footer = () =>  {
         <footer className='footerr'>
         <div className='about-us'>
             <h1>O nas</h1>
-            <p>f the primary page. Thetag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the pri</p>
+            <p>W tym momencie jest drugą największą siecią kinową na świecie obejmującą 9 518 sal w 790 kinach. Cineworld działa w 10 krajach - w Stanach Zjednoczonych, Wielkiej Brytanii, Polsce, Irlandii, Izraelu, Czechach, Bułgarii, Rumunii, na Węgrzech i na Słowacji. Rocznie organizuje 14,5 miliona projekcji filmowych, które wyświetlane są ponad 300 milionom widzów.</p>
         </div>
         <div className='contact'>
             <h2>Kontakt</h2>
-            <p>123456789</p>
-            <p>kino@gmail.com</p>
+            <p className='phone' ><FiPhone />  123456789</p>
+            <p className='phone' ><FiMail />  cineaapp@gmail.com</p>
+            <div className='social'>
+            <a href="https://twitter.com/?lang=pl"><FiTwitter /> </a> 
+            <a href="https://www.instagram.com/grzegorzpryjma/"><FiInstagram /> </a> 
+            <a href="https://www.facebook.com/grzegorz.pryjma/"><FiFacebook /> </a> 
+            </div>
         </div>
-        <div className='map' id="map">
+        {/* <div className='map' id="map">
 
           <img className='mapka' src={mapka}></img>
-        </div>
+        </div> */}
         </footer>
   );
 };

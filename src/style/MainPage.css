@@ -1,12 +1,3 @@
-html, body {
-    width: 100vw;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.66) 0%, rgba(255, 255, 255, 0) 100%), #DDDBDB;
-    margin: 0;
-    overflow: auto;
-    scroll-behavior: smooth;
-}
-
-
 *{
     font-style: normal;
     font-weight: normal;
@@ -19,17 +10,10 @@ html, body {
 
 .logo{
     margin-left: 0;
+
 }
 
-.haeder{
-    background: #C4C4C4;
-    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-    display: flex;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-}
+
 
 .login-register-buttons{
     float: right;
@@ -65,6 +49,7 @@ html, body {
 }
 .galery-image{
     height: 500px;
+    width: 730px;
     margin: 1em;
 }
 
@@ -126,10 +111,31 @@ a:hover{
     margin-top: 2em;
 }
 
+.phone{
+    font-size: 25px;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .the-film{
     display: flex;
     flex-direction: row;
     padding: 3em;
+    height: 440px;
+}
+
+.about-us>p{
+    width: 25vw;
+}
+.social{
+    font-size: 30px;
+    margin: auto;
+    display: flow-root;
+}
+
+.social>a:visited{
+    color: black;
 }
 
 .film-details{
@@ -154,7 +160,7 @@ a:hover{
 
 .time>button:hover{
    background-color: rgb(209, 203, 203);
-   border: 1px solid #FF3A3A;
+   border: 1px solid #f27b13;
 
 }
 .repertoire-buttons{
@@ -220,7 +226,7 @@ a:hover{
 }
 
 .operation-buttons>button{
-    background-color: #FF3A3A;
+    background-color: #f27b13;
     color: black;
     border-radius: 10px;
     border: 0;
@@ -267,15 +273,7 @@ letter-spacing: 5px;
 
 }
 
-/*footer*/
-footer{
-    bottom:0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background: #C4C4C4;
-    opacity: 80%;
-}
+
 
 .about-us{
     width: 33vw;
@@ -330,7 +328,7 @@ footer{
     justify-content: center;
     align-items: center;
     margin: 1em;
-    background-color: #FF3A3A;
+    background-color: #f27b13;
     color: black;
     border-radius: 10px;
     border: 0;
@@ -379,6 +377,10 @@ width: 80px;
 @media only screen and (max-device-width: 420px){
     .logo{
         height: 60px;
+        margin-left: 0;
+        margin: auto;
+        width: 270px;
+
     }
 
     .login-btn{
@@ -399,9 +401,17 @@ width: 80px;
 
     .galery-image{
         height: 200px;
+        width: 300px;
     }
 
-    
+    .about-us > p {
+        width: auto;
+        text-align: center;
+    }
+
+    .contact{
+        width: 90vw;
+    }
 
     .login-register-buttons-mobile{
         display: flex;
@@ -415,6 +425,7 @@ width: 80px;
 
     .repertoire-buttons{
         width: 100%;
+        padding: 0;
     }
 
     .repertoire {
@@ -439,6 +450,7 @@ width: 80px;
         display: flex;
         flex-direction: column;
         padding: 1.5em;
+        height: auto;
     }
 
     .screening-image {

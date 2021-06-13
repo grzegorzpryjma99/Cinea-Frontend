@@ -19,6 +19,7 @@ const login = (username, password) => {
     .then((response) => {
       if (response.data.accessToken) {
         localStorage.setItem("user", JSON.stringify(response.data));
+        localStorage.setItem("id", JSON.stringify(response.data.id));
       }
       return response.data;
     });
@@ -26,7 +27,8 @@ const login = (username, password) => {
 
 const logout = () => {
   localStorage.removeItem("user");
-  console.log("usuwam token")
+  localStorage.removeItem("id");
+  console.log("token was deleted")
 };
 
 const getCurrentUser = () => {

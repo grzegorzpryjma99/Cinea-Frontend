@@ -34,6 +34,12 @@ const Galeria = () =>  {
                 <img className='galery-image' src={image5}></img>
                 <img className='galery-image' src={image1}></img>
                 <img className='galery-image' src={image2}></img>
+                <img className='galery-image' src={image2}></img>
+                <img className='galery-image' src={image3}></img>
+                <img className='galery-image' src={image4}></img>
+                <img className='galery-image' src={image5}></img>
+                <img className='galery-image' src={image1}></img>
+                <img className='galery-image' src={image2}></img>
                 {/* <MyImage /> */}
 
 
