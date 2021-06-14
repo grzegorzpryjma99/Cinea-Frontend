@@ -6,16 +6,15 @@ Cinema booking system. Web application for booking tickets at the cinema. Client
 * HTML5
 * CSS#
 * JavaScript
-* Redux
 * React
 
 ## Check more
 https://github.com/grzegorzpryjma99/Cinea-Backend
 
-![obraz](https://user-images.githubusercontent.com/62578864/121825465-d386bd80-ccb2-11eb-9046-9e200e6cae6b.png)
-![obraz](https://user-images.githubusercontent.com/62578864/121825473-e5686080-ccb2-11eb-93b7-c9f0c346e4e0.png)
-![obraz](https://user-images.githubusercontent.com/62578864/121825481-f618d680-ccb2-11eb-83ce-208bf5c297e0.png)
-![obraz](https://user-images.githubusercontent.com/62578864/121825498-13e63b80-ccb3-11eb-8460-1be0914e7547.png)
-![obraz](https://user-images.githubusercontent.com/62578864/121825508-23fe1b00-ccb3-11eb-8840-466b88175d97.png)
-![obraz](https://user-images.githubusercontent.com/62578864/121825521-37a98180-ccb3-11eb-95ed-fc155219beb6.png)
-![obraz](https://user-images.githubusercontent.com/62578864/121825532-4c861500-ccb3-11eb-907f-5c5243ec9bec.png)
+![obraz](https://user-images.githubusercontent.com/62578864/121825770-83105f80-ccb4-11eb-9b45-cf27953ce606.png)
+![obraz](https://user-images.githubusercontent.com/62578864/121825780-94f20280-ccb4-11eb-962c-277133c4933e.png)
+![obraz](https://user-images.githubusercontent.com/62578864/121825791-9fac9780-ccb4-11eb-8a39-76f74625b6b4.png)
+![obraz](https://user-images.githubusercontent.com/62578864/121825809-b2bf6780-ccb4-11eb-8654-af472d7e5e0c.png)
+![obraz](https://user-images.githubusercontent.com/62578864/121825824-c5d23780-ccb4-11eb-995f-859da833b421.png)
+![obraz](https://user-images.githubusercontent.com/62578864/121825839-e13d4280-ccb4-11eb-8a42-fe5fbf3deaab.png)
+
