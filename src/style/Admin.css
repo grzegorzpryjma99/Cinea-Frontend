@@ -1,0 +1,77 @@
+.container-admin{
+    display: flex;
+    flex-direction: row;
+    transform: translate(0, 5%);
+    justify-content: center;
+    background-color: white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    width: 90%;
+    height: 90vh;
+    align-items: center;
+    border-radius: 0.7em;
+    padding: 1em;
+    overflow: auto;
+}
+
+.container-admin-add{
+    display: flex;
+    flex-direction: column;
+    transform: translate(0, 5%);
+    justify-content: center;
+    background-color: white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    width: 90%;
+    height: 90vh;
+    align-items: center;
+    border-radius: 0.7em;
+    padding: 1em;
+    overflow: auto;
+}
+
+.film{
+    display: flex;
+    flex-direction: row;
+    background-color: #ECECEC;
+    width: 20vw;
+    height: 10vh;
+    border-radius: 10px;
+    padding: 0.5em;
+    align-items: center;
+    margin: 1em;
+    justify-content: space-between;
+}
+
+.container{
+    border: 1px solid;
+    padding: 2em;
+}
+
+.filmEditBox{
+    text-align: center;
+    padding: 1em;
+    transform: translate(0, 14%);
+    margin: 1em;
+    border-left: 1px solid black;
+}
+
+.screeningEditBox{
+    text-align: center;
+    padding: 1em;
+    transform: translate(0, 10%);
+    margin: 1em;
+}
+
+@media only screen and (max-device-width: 420px){
+    .container-admin{
+        flex-direction: column;
+        width: 90vw;
+    }
+    .filmEditBox{
+        border-left: 0;
+        border-top: 1px solid;
+    }
+
+    .film{
+        width: 90vw;
+    }
+}

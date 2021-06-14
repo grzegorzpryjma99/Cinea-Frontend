@@ -1,18 +1,18 @@
 import React, { Component } from "react";
-import { NavLink, Redirect, useHistory } from 'react-router-dom'
-
+import { NavLink } from 'react-router-dom'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import axios from 'axios'
 import Slider from "react-slick";
-import plakat from '../platak.svg'
-import "./Slider.css"
-export default class CenterMode extends Component {
+import "../../style/Slider.css"
+import {Image} from 'cloudinary-react';
+
+
+export default class Responsive extends Component {
 
     constructor(props) {
         super(props);
     
-      //const {filmID} = useParams();
       this.state ={
         data: ""
       }
@@ -32,18 +32,30 @@ export default class CenterMode extends Component {
       className: "center",
       centerMode: true,
       dots: true,
-      infinite: true,
+      infinite: this.state.data.length > 2,
       autoplay: true,
       centerPadding: "0px",
       slidesToShow: 3,
-      speed: 500
+      speed: 500,
+      responsive: [{
+        breakpoint: 620,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+        },
+      }]
     };
 
     const filmList = this.state.data && this.state.data.map(film => {
         return(
-            <NavLink to={`/film/${film.id}`}>  
+            <NavLink to={`/film/${film.id}`} >  
             <div  key={film.id}>
-                <img className='image-slider' src={plakat}></img>
+              <Image className='film-image-slider' cloudName="dhdzistwc" publicId={film.filmDetails.imageURL}/>
             </div>
             </NavLink>
         );
@@ -52,7 +64,7 @@ export default class CenterMode extends Component {
     return (
       <div className='slider'>
         <Slider {...settings}>
-        {filmList ? filmList : <p>Ładowanie...</p>}
+        {filmList ? filmList : <p className="preloader"></p>}
         </Slider>
       </div>
     );

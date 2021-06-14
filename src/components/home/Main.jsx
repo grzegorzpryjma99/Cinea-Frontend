@@ -1,31 +1,57 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom'
-import "./MainPage.css"
+import React, {useContext, useState} from 'react';
+import "../../style/MainPage.css"
 import Recomended from "./Recomended";
-import Repertoire from "./Repertoire"
-import Films from '../filmpage/Films'
+import Films from './Films'
+import { ScreeningContext } from '../admin/AdminPanel'
+import Galeria from './Galeria';
 
 const Main = () =>  {
 
-    const togglePanel = () => {
-        
-      };
+  const {filmy} = useContext(ScreeningContext) 
+  const [film, setFilm] = useState("");
+  const now = new Date();
+  const [date, setDate]= useState(`${now.getFullYear()}-${0}${now.getMonth()+1}-${now.getDate()}`)
+ 
+  function SelectionList(param) {
+    return <div className='selectionContainer'>
+      <select className='choose-date' onChange={(e) => {const film = e.target.value; setFilm(film);}}>
+        { param.lista.map(item =>  {
+         return <option 
+                  id='film' 
+                  className='selection-item' 
+                  name='film' 
+                  key={item.id} 
+                  value={item.filmDetails.title} >{item.filmDetails.title}
+                  </option>
+        })}
+      </select>
+    </div>
+  }
 
-    return (
+  return (
             <div>
-            <Recomended />
-            <Repertoire />
-            <Switch>
-                <Route path='/main-page/pn' component={Films}/>
-                <Route path='/main-page/wt' component={Films}/>
-                <Route path='/main-page/sr' component={Films}/>
-                <Route path='/main-page/cz' component={Films}/>
-                <Route path='/main-page/pt' component={Films}/>
-                <Route path='/main-page/sob' component={Films}/>
-                <Route path='/main-page/nd' component={Films}/>
-            </Switch>
-       </div>
-           
+              <Recomended />
+              <div className="c-or">
+              <span id="seanse">Repertuar</span>
+                <div className="repertoire-buttons">
+                    <input 
+                    className='choose-date'
+                    value={date}
+                    onChange={(e) => {const date = e.target.value; setDate(date);}}
+                    type='date'></input>
+                    <SelectionList lista = {filmy} />
+                </div>
+              </div>
+              
+              <Films data={date} film={film}/>
+              
+              <div className='c-or'>
+                <span  id="gallery">Galeria</span>
+              </div>
+              
+              <Galeria />
+
+              </div>
   );
 };
 

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+html, body {
+    width: 100vw;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.66) 0%, rgba(255, 255, 255, 0) 100%), #eceaea;
+    margin: 0;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+footer{
+    bottom:0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #C4C4C4;
+}
+
+.haeder{
+    background-color:#C4C4C4;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover{
+    transform: scale(1.05, 1.05);
+}

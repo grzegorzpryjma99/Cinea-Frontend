@@ -1,38 +1,10 @@
-import React ,{useState, useRef}from "react";
-import { useHistory } from "react-router-dom";
-import "./Signin.css"
-import "./Signup.css"
-import logo from './logo.svg'
+import React ,{useState}from "react";
+import { NavLink, useHistory } from "react-router-dom";
+import "../style/Signin.css"
+import logo from '../image/logo2.svg'
 import AuthService from "../services/auth.service";
 
 const Signin = (props) => {
-  // const dispatch = useDispatch();
-  // const history = useHistory();
-  // const [username, setUsername] = useState("");
-  // const [password, setPassword] = useState("");
-
-  // const togglePanel = () => {
-  //   history.push("/signup");
-  // };
-
-  // const formik = useFormik({
-  //   initialValues: {
-  //     username: "",
-  //     password: "",
-  //   },
-  //   validationSchema: SigninSchema,
-  //   onSubmit: (values, { resetForm }) => {
-  //     const form = {
-  //       username: values.username,
-  //       password: values.password,
-  //       setUsername(username);
-  //       setPassword(password);
-  //     };
-  //     AuthService.login(username,password)
-  //     //dispatch(signin(form))
-  //     resetForm();
-  //   },
-  // });
 
   const history = useHistory();
   const [username, setUsername] = useState("");
@@ -55,13 +27,16 @@ const Signin = (props) => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-
-    //form.current.validateAll();
-
       AuthService.login(username, password).then(
         () => {
-          history.push("/main-page");
-          window.location.reload();
+          if(JSON.parse(localStorage.getItem('user')).roles[0] == 'ROLE_ADMIN'){
+            history.push("/adminSettings");
+            window.location.reload();
+          } else{
+            history.push("/main-page");
+            window.location.reload();
+          }
+          
         },
         (error) => {
           const resMessage =
@@ -76,36 +51,33 @@ const Signin = (props) => {
   
   return (
     <section>
-        <img src={logo} className="logo-login"/>
+      <NavLink to='/main-page'><img src={logo} className="logo-login"/></NavLink>
         <div className='container-login'>
+        <h1 className='register-header'>Logowanie</h1>
         <form  onSubmit={handleLogin}>
+
         <label htmlFor='email'></label>
           <input
             id='username'
             name='username'
+            placeholder='login'
             type='username'
             onChange={onChangeUsername}
             value={username}
           />
-          {/* {formik.touched.email && formik.errors.email ? (
-            <div className='form-error'>{formik.errors.email}</div>
-          ) : null} */}
-  
+
           <label htmlFor='password'></label>
           <input
             id='password'
             name='password'
+            placeholder='haslo'
             type='password'
             onChange={onChangePassword}
             value={password}
           />
-          {/* {formik.touched.password && formik.errors.password ? (
-            <div className='form-error'>{formik.errors.password}</div>
-          ) : null} */}
 
           <button className='login-button' type='submit'>Zaloguj się</button>
         </form>
-
         <button className='register-button' onClick={togglePanel}>Zarejestruj się</button>
         </div>
     </section>
