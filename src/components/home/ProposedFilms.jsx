@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { NavLink } from 'react-router-dom'
 import "../../style/MainPage.css"
 import axios from 'axios'
@@ -11,7 +10,6 @@ class ProposedFilms extends Component {
     constructor(props) {
         super(props);
     
-      //const {filmID} = useParams();
       this.state ={
         data: ""
       }
@@ -38,11 +36,7 @@ class ProposedFilms extends Component {
             );
         })
            
-        //   console.log(filmList)
-        //console.log(this.state.data);
-        console.log(this.state.data) //
         return (
-          
             <div>
                 <h1 class='recomended'>Polecane</h1>
                 <div class='recomended-films'>

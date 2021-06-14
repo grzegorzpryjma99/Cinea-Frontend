@@ -7,8 +7,9 @@ import Films from '../home/Films'
 
 const FilmDetails = (dane) =>{
         
-        const [popup, setPopup] =  useState(false);
-        const handleClick = () =>{
+    const [popup, setPopup] =  useState(false);
+        
+    const handleClick = () =>{
             setPopup(!popup);
         }
 
@@ -21,7 +22,6 @@ const FilmDetails = (dane) =>{
                 </div> 
             ) : null}
             <section className= {popup ? 'blur' : null}>
-                
                 
                 <div className='container-film'>
                     <div className='photo'>
@@ -52,17 +52,9 @@ const FilmDetails = (dane) =>{
                         <div className='description'>
                             {dane.dane.filmDetails.description}
                         </div>
-                        <button  className='booking-button' onClick={handleClick}> Kup bilety</button>
-
-                        
-
-                        
+                        <button  className='booking-button' onClick={handleClick}> Kup bilety</button>      
                     </div>
                 </div>
-
-
-                
-                
 
                 <div>
                 <div className='c-or'>
@@ -84,69 +76,9 @@ const FilmDetails = (dane) =>{
 
                         </div>
                 </div>
-            
             </section>
             </div>
               );
         }
     
-
     export default FilmDetails;
-        ;
-//     const state = useState({
-//         title: "",
-//         description: ""
-//     })
-
-    
-//   // console.log(dane.id)
-//    // console.log(dane.filmDetails.title)
-//   return (
-    
-//     <section>
-        
-//     <h1 className='title'>fsd</h1>
-//     <div className='container-film'>
-//         <div className='photo'>
-//             <img src={plakat}/>
-//         </div>
-//         <div className='details'>
-//             <div className='data-time'>
-//                 <div className='date'>
-//                     <div className='data-icon'>
-//                         placeholder
-//                     </div>
-//                     <div className="date-div">
-//                         <p>Data premiery</p>
-//                         <p>dsa</p>
-//                     </div>
-//                 </div>
-//                 <div className='time'>
-//                     <div className='time-icon'>
-//                         placeholder
-//                     </div>
-//                     <div className='time-div'>
-//                         <p>Czas trwania</p>
-//                         <p>das</p>
-//                     </div>
-//                 </div>
-//             </div>
-//             <div className='description'>
-//                 <p>dsa</p>
-//             </div>
-//             <button className='booking-button'>Kup bilety</button>
-//         </div>
-//     </div>
-
-//     <div>
-//             <h1 class="title">Zobacz zwiastun</h1>
-//             <div class='trailer'>
-//                 <img src='zwiastun.svg'></img>
-//             </div>
-//     </div>
-
-// </section>
-//   );
-// };
-
-// export default FilmsDetails;

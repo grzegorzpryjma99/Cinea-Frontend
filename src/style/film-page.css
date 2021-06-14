@@ -3,15 +3,12 @@
     font-weight: normal;
     margin-left: auto;
     margin-right: auto;
-
     font-family: 'Roboto', sans-serif;
-    
 }
 
 .logo{
     margin: 7px;
 }
-
 
 .container-film{
     display: flex;
@@ -23,7 +20,6 @@
 .details{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
 }
 
 .data-time{
@@ -39,6 +35,7 @@
 .list{
     padding: 2em;
     width: 60vw;
+    text-align: center;
 }
 
 .full-details{   
@@ -97,8 +94,8 @@
     margin-right: 5vw;
     padding: 1em;
     font-family: Roboto;
-font-style: normal;
-font-weight: 300;
+    font-style: normal;
+    font-weight: 300;
 }
 
 .description{
@@ -171,66 +168,72 @@ iframe{
 
 @media only screen and (max-device-width: 420px){
 
-.photo{
-    width: 90vw;
-}
+    .photo{
+        width: 80vw;
+    }
 
-.film-image {
-    width: 320px;
-    height: 391px;
-}
+    .film-image {
+        width: 100%;
+        height: 391px;
+    }
 
-.container-film{
-    flex-direction: column;
-    width: 100%;
-    
-}
+    .title{
+        padding: 0;
+    }
 
-.full-details {
-    width: 98vw;
-    padding: 0;
-}
+    .container-film{
+        flex-direction: column;
+        width: 90vw;
+        margin: 20px;
+    }
 
-.description{
-    width: 77vw;
-    height: auto;
-}
+    .full-details {
+        width: 98vw;
+        padding: 0;
+    }
 
-.details{
-    width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
-}
+    .description{
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
 
-.data-icon{
-    font-size: 35px;
-}
+    .details{
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.time-icon{
-    font-size: 35px;
-}
+    .data-icon{
+        font-size: 35px;
+        padding-left: 0;
+    }
 
-.data-time{
-    font-size: 1.2em;
-}
+    .time-icon{
+        font-size: 35px;
+    }
 
-.booking-button{
-    width: 55vw;
-}
+    .data-time{
+        font-size: 1.2em;
+    }
 
-iframe{
-    max-width: 90%;
-height: 380px;
-}
+    .booking-button{
+        width: 55vw;
+    }
 
-.popup{
-    left: 2vw;
-    width: 95vw;
-}
+    iframe{
+        max-width: 90%;
+        height: 380px;
+    }
 
-.list {
-    padding: 1em;
-    width: 90vw;
-}
+    .popup{
+        left: 2vw;
+        width: 95vw;
+    }
 
+    .list {
+        padding: 1em;
+        width: 90vw;
+        text-align: center;
+    }
 }

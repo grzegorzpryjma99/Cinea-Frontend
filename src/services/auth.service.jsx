@@ -28,7 +28,6 @@ const login = (username, password) => {
 const logout = () => {
   localStorage.removeItem("user");
   localStorage.removeItem("id");
-  console.log("token was deleted")
 };
 
 const getCurrentUser = () => {

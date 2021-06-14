@@ -1,6 +1,5 @@
 import React , { useState }from "react";
 import { useFormik } from "formik";
-import { useDispatch } from "react-redux";
 import axios from 'axios';
 import {Image} from 'cloudinary-react';
 
@@ -11,65 +10,57 @@ const AddFilm = () => {
  
   const[imageSelected, setImageSelected] = useState("");
   const[imageUrl, setimageUrl] = useState("");
-    const dispatch = useDispatch();
-    // const [title, setTitle] = useState("");
-    // const [description, setDescription] = useState("");
     
-    const uploadImage = () => {
-      const formData = new FormData()
-      formData.append("file", imageSelected)
-      formData.append("upload_preset", "disldfo5")
-      console.log(imageSelected);
-      axios.post("https://api.cloudinary.com/v1_1/dhdzistwc/image/upload", 
-      formData)
-      .then((response) =>{
-      console.log(response.data.public_id);
-      setimageUrl(response.data.public_id)
-      setimageUrl(`https://res.cloudinary.com/dhdzistwc/image/upload/v1621778224/${response.data.public_id}.png`);
-      });
-    };
+  const uploadImage = () => {
+    const formData = new FormData()
+    formData.append("file", imageSelected)
+    formData.append("upload_preset", "disldfo5")
+    axios.post("https://api.cloudinary.com/v1_1/dhdzistwc/image/upload", 
+    formData)
+    .then((response) =>{
+    setimageUrl(response.data.public_id)
+    setimageUrl(`https://res.cloudinary.com/dhdzistwc/image/upload/v1621778224/${response.data.public_id}.png`);
+    });
+  };
 
-    const formik = useFormik({
-        initialValues: {
-          category: "",
-          title: "",
-          description: "",
-          trailer: "",
-          time: "",
-          releaseDate: "",
-          imageURL: "",
-          originalTitle: "",
-          director: "",
-          staff: ""
-        },
-        onSubmit: (values, {resetForm}) =>  {
-
-          const form = {
-            filmDetails:{
-                category: values.category,
-                title: values.title,
-                description: values.description,
-                trailer: values.trailer,
-                time: values.time+':00',
-                releaseDate: values.date,
-                imageURL: imageUrl,
-                originalTitle: values.originalTitle,
-                director: values.director,
-                staff: values.staff,
-          }
-          };
-          const xd = JSON.stringify(form)
-          console.log(xd)
-          const res = axios.post(`http://localhost:8080/api/films/add`, xd, {headers: {'Content-Type': 'application/json', 'Host' : 'http://localhost:3000'  
-          , 'Content-Length' : '1000' }})
-          console.log(res);
-          resetForm();
-          alert('Film został dodany')
-        },
-      });
+  const formik = useFormik({
+      initialValues: {
+        category: "",
+        title: "",
+        description: "",
+        trailer: "",
+        time: "",
+        releaseDate: "",
+        imageURL: "",
+        originalTitle: "",
+        director: "",
+        staff: ""
+      },
+      onSubmit: (values, {resetForm}) =>  {
+        const form = {
+          filmDetails:{
+              category: values.category,
+              title: values.title,
+              description: values.description,
+              trailer: values.trailer,
+              time: values.time+':00',
+              releaseDate: values.date,
+              imageURL: imageUrl,
+              originalTitle: values.originalTitle,
+              director: values.director,
+              staff: values.staff,
+        }
+        };
+        const xd = JSON.stringify(form)
+        axios.post(`http://localhost:8080/api/films/add`, xd, {headers: {'Content-Type': 'application/json', 'Host' : 'http://localhost:3000'  
+        , 'Content-Length' : '1000' }})
+        resetForm();
+        alert('Film został dodany')
+      },
+    });
 
   return (
-    <section className='container-admin'>
+    <section className='container-admin-add'>
         <h1 class='register-header'>Dodaj film</h1>
         <div class='container'>
         <button onClick={uploadImage}>upload</button>

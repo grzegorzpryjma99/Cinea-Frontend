@@ -8,7 +8,6 @@ import {ScreeningContext} from '../components/admin/AdminPanel'
 const Cart = () =>  {
 
     const { updateTickets, updateOrderScreening } = useContext(ScreeningContext);
-
     const { screeningId } = useParams();
     const history = useHistory();
     const [normalTickets, setNormalTickets] = useState(0);
@@ -51,15 +50,13 @@ const Cart = () =>  {
         setSum(sum + halfPrice)
     }
 
-    const xd = () => {
-        //updateOrderScreening(screening)
+    const update = () => {
         updateTickets(halfTickets, normalTickets, sum) 
     }
 
     return (
         <main>
         <Header/>
-        
         <section className='cart-section'>
         <h1 className="cart-header">Wybierz bilety</h1>
 
@@ -71,24 +68,21 @@ const Cart = () =>  {
                 <button className='decrement' onClick={decreaseNormal}><FiMinus/></button>
             </div>
             </div>
-            
 
             <div className='normal-ticket'>
             <h1>Bilet ulgowy</h1> {halfPrice + 'PLN'}
-            
             <div className='quantity'>
                 <button className='increment' onClick={increaseHalf}><FiPlus/></button>
                 <input className='ticket-input' placeholder={halfTickets}></input>
                 <button className='decrement' onClick={decreaseHalf}><FiMinus/></button>
             </div>
             </div>
+            
             <div className='total'>
                 <h2>Podsumowanie</h2>
                 <p className='total-sum'>{sum + ' PLN '}</p>
-                {/* {normalTickets + 'normalny '} 
-                {halfTickets + 'ulgowy '} */}
             </div>
-            <NavLink to='/cart/place'><button onClick={xd} className='order-button'>Dalej</button></NavLink>
+            <NavLink to='/cart/place'><button onClick={update} className='order-button'>Dalej</button></NavLink>
         </section>
         </main>
   );

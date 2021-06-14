@@ -1,6 +1,5 @@
 import React from "react";
 import {Switch, Route, BrowserRouter as Router } from "react-router-dom";
-
 import Signin from "../pages/Signin.jsx";
 import Signup from "../pages/Signup.jsx";
 import MainPage from "../pages/MainPage";
@@ -12,7 +11,6 @@ import AdminSettings from "../components/admin/AdminSettings.jsx";
 import Sum from "../components/order/Sum.jsx";
 import Place from "../components/order/Place.jsx";
 import Cart from "../pages/Cart";
-
 
 const Routes = () => {
   return (

@@ -5,8 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 import Slider from "./Slider";
 
 const Recomended = () =>  {
-
-
+    
     return (
         <Switch>
             <Route exact path='/main-page*' component={Slider}/>

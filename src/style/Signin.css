@@ -45,7 +45,6 @@ html, body {
     outline: 0;
     border-bottom: 1px solid #000000;
     text-align: center;
-
 }
 
 #password{
@@ -55,7 +54,6 @@ html, body {
     outline: 0;
     border-bottom: 1px solid #000000;
     text-align: center;
-    
 }
 
 .login-button{
@@ -86,12 +84,6 @@ html, body {
     letter-spacing: 2px;
 }
 
-
-/* register */
-
-
-
-
 .register-header{
     text-align: center;
     margin-top: 0;
@@ -101,7 +93,6 @@ html, body {
     color: #494848;
     margin-bottom: 50px;
 }
-
 
 form>input{
     width: 22vw;
@@ -113,8 +104,8 @@ form>input{
 
 }
 
-
 @media only screen and (max-device-width: 420px){
+    
     .logo-login{
         width: 50%;
     }

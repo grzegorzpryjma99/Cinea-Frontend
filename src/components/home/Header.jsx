@@ -5,7 +5,6 @@ import logo from '../../image/logo.svg'
 import icon from '../../image/icon.svg'
 import "../../style/MainPage.css"
 import AuthService from "../../services/auth.service";
-import { FaUser } from "react-icons/fa";
 import Hamburger from 'hamburger-react';
 
 
@@ -13,32 +12,31 @@ const Header = () =>  {
 
   const history = useHistory();
   const [isOpen, setOpen] = useState(false);
+
   const toRegister = () => {
     history.push("/signup");
+    window.location.reload()
   }
 
   const toLogin = () => {
     AuthService.logout();
     history.push("/");
+    window.location.reload()
   }
 
   const toHome = () => {
     history.push("/main-page");
+    window.location.reload()
   }
-
-
 
     return (
         <header className='haeder'>
-        {/* <NavLink to='/main-page'><img src={logo} className="logo"/></NavLink> */}
         <img src={logo} className="logo"/>
         <div className='href-div'>
-        <a className='gallery-btn' href="/main-page#gallery">Galeria</a>
-        <a className='gallery-btn' href="/main-page#seanse">Repertuar</a>
-        {/* <a className='gallery-btn' href={`#trailer`}>Zwiastun</a>
-        <a className='gallery-btn' href="#details">Szczegóły</a> */}
+          <a className='gallery-btn' href="/main-page#gallery">Galeria</a>
+          <a className='gallery-btn' href="/main-page#seanse">Repertuar</a>
         </div>
-        
+
         <div className='login-register-buttons'>
             <button className='login-btn' onClick={toLogin}>{localStorage.getItem("user") ? "wyloguj" :"logowanie" }</button>
             <button className='register-btn' onClick={toRegister}>{localStorage.getItem("user") ? "" :"rejestracja" }</button>
@@ -46,8 +44,8 @@ const Header = () =>  {
 
         {isOpen ? <div className='login-register-buttons-mobile'>
             <div className='href-div-mobile'>
-            <a className='gallery-btn' href="/main-page#gallery">Galeria</a>
-        <a className='gallery-btn' href="/main-page#seanse">Repertuar</a>
+              <a className='gallery-btn' href="/main-page#gallery">Galeria</a>
+              <a className='gallery-btn' href="/main-page#seanse">Repertuar</a>
             </div>
             <button className='register-btn-mobile' onClick={toHome}>Strona główna</button>
             <button className='login-btn-mobile' onClick={toLogin}>{localStorage.getItem("user") ? "wyloguj" :"logowanie" }</button>

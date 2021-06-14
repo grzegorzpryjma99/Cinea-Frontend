@@ -13,7 +13,6 @@ export default class Responsive extends Component {
     constructor(props) {
         super(props);
     
-      //const {filmID} = useParams();
       this.state ={
         data: ""
       }
@@ -33,7 +32,6 @@ export default class Responsive extends Component {
       className: "center",
       centerMode: true,
       dots: true,
-    //  infinite: true,
       infinite: this.state.data.length > 2,
       autoplay: true,
       centerPadding: "0px",
@@ -44,14 +42,12 @@ export default class Responsive extends Component {
         settings: {
           slidesToShow: 1,
         },
-        
       },
       {
         breakpoint: 1000,
         settings: {
           slidesToShow: 2,
         },
-        
       }]
     };
 
@@ -68,7 +64,7 @@ export default class Responsive extends Component {
     return (
       <div className='slider'>
         <Slider {...settings}>
-        {filmList ? filmList : <p class="preloader"></p>}
+        {filmList ? filmList : <p className="preloader"></p>}
         </Slider>
       </div>
     );

@@ -5,12 +5,10 @@ import Films from './Films'
 import { ScreeningContext } from '../admin/AdminPanel'
 import Galeria from './Galeria';
 
-
 const Main = () =>  {
 
   const {filmy} = useContext(ScreeningContext) 
   const [film, setFilm] = useState("");
-
   const now = new Date();
   const [date, setDate]= useState(`${now.getFullYear()}-${0}${now.getMonth()+1}-${now.getDate()}`)
  
@@ -30,15 +28,12 @@ const Main = () =>  {
     </div>
   }
 
-
   return (
             <div>
               <Recomended />
-              
               <div className="c-or">
               <span id="seanse">Repertuar</span>
                 <div className="repertoire-buttons">
-                  {/* <h1>Filtruj</h1> */}
                     <input 
                     className='choose-date'
                     value={date}
@@ -50,19 +45,13 @@ const Main = () =>  {
               
               <Films data={date} film={film}/>
               
-              
               <div className='c-or'>
-              <span  id="gallery">Galeria</span>
+                <span  id="gallery">Galeria</span>
               </div>
               
-              {/* <div className='gallery'>
-              {filmy.map( film => <div>
-                <Image className='screening-image'  cloudName="dhdzistwc" publicId={film.filmDetails.imageURL}/>
-              </div>)}
-              </div> */}
               <Galeria />
+
               </div>
-           
   );
 };
 

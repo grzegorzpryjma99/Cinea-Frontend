@@ -76,7 +76,7 @@ const Sum = () =>  {
     return (
         <main>
         <Header/>
-        <section className='sum-section'>
+        <section className='cart-section'>
         <h1 className='cart-header'>Sprawdź swoje zamówienie</h1>
         {normal.map( ticket => 
             <div className='ticket' key={ticket.id}>

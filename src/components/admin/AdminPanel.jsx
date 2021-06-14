@@ -1,43 +1,29 @@
 import React, {createContext, useEffect, useState}from "react";
-import { useHistory } from "react-router-dom";
 import "../../style/Signin.css"
 import "../../style/Admin.css"
-
 export const ScreeningContext = createContext();
-
 
 export const AdminPanel = (props) => {
 
   const tablicaHalf = []; //tu mam obiekty biletow ulgowych 
   const tablicaNormal= []; //tu mam obiekty biletow normalnych
-  const history = useHistory();
-
   const [films, setFilms] = useState([]);  //wszystkie filmy
   const [rooms, setRooms] = useState([]);  //wszystkie sale
   const [screenings, setScreenings] = useState([]); //wszystkie seanse
-
-
   const [orderScreening, setOrderScreening] = useState(""); //zamawiany seans
   const [orderPlaces, setOrderPlacecs] = useState(""); // id zamawianych miejsc
-
   const [normalTickets, setNormalTickets] = useState(0); //ile normalnych
   const [halfTickets, setHalfTickets] = useState(0); //ile ulgowych
   const [tickets, setTickets] = useState(0); //ilosc biletow
   const [sum, setSum] = useState(0); //koszt biletow
-
   const [normal, setNormal] = useState([]);
   const [half, setHalf] = useState([]);
-
-  
-
 
   const updateTickets = (half, normal, suma) => {
     setNormalTickets(normal)
     setHalfTickets(half)
     setSum(suma)
     setTickets(normal+half)
-
-    
 
     if(half > 0){
       for(var i = 0; i < half; i++){
@@ -52,7 +38,7 @@ export const AdminPanel = (props) => {
     }
     
     if(normal > 0){
-      for(var i = 0; i < normal; i++){
+      for(i = 0; i < normal; i++){
         const ticketNormal = {
         screening: orderScreening,
         typeTicket: 'REGULAR_TICKET',
@@ -71,22 +57,13 @@ export const AdminPanel = (props) => {
   }
 
   const updateOrderPlaces = (data) =>{   
-    console.log(data, 'miejsca do rozdania') 
-    console.log(normal, 'normalne');
-    //console.log(half, 'ulgowe')
 
     normal.forEach(function (item) {
       console.log(item.placeId = data.pop())
     })
-
     half.forEach(function (item) {
-
       console.log(item.placeId = data.pop())
-
     })
-    console.log(normal, 'normalne');
-    console.log(half, 'ulgowe')
-
   }
   
   useEffect(() => {

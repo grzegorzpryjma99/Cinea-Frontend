@@ -53,8 +53,9 @@ const Signin = (props) => {
     <section>
       <NavLink to='/main-page'><img src={logo} className="logo-login"/></NavLink>
         <div className='container-login'>
-        <h1 class='register-header'>Logowanie</h1>
+        <h1 className='register-header'>Logowanie</h1>
         <form  onSubmit={handleLogin}>
+
         <label htmlFor='email'></label>
           <input
             id='username'
@@ -64,10 +65,7 @@ const Signin = (props) => {
             onChange={onChangeUsername}
             value={username}
           />
-          {/* {formik.touched.email && formik.errors.email ? (
-            <div className='form-error'>{formik.errors.email}</div>
-          ) : null} */}
-  
+
           <label htmlFor='password'></label>
           <input
             id='password'
@@ -77,13 +75,9 @@ const Signin = (props) => {
             onChange={onChangePassword}
             value={password}
           />
-          {/* {formik.touched.password && formik.errors.password ? (
-            <div className='form-error'>{formik.errors.password}</div>
-          ) : null} */}
 
           <button className='login-button' type='submit'>Zaloguj się</button>
         </form>
-
         <button className='register-button' onClick={togglePanel}>Zarejestruj się</button>
         </div>
     </section>

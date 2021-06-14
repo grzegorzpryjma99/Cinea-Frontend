@@ -10,18 +10,9 @@
     color: black !important;
 }
 
-
-
 .slick-prev {
     left: -75px;
 }
-
-
-/**
- * CSS3 Preloaders
- * https://danielpietrasik.pl/css3-preloaders/
- **/
-
 
  .preloader,
  .preloader:before,
@@ -29,7 +20,6 @@
      background: #f27b13;
      animation: animation 1s infinite ease-in-out;
      width: 12px;
-     
  }
  
  .preloader:before,
@@ -46,36 +36,37 @@
  .preloader {
     width: 10px !important;
     display: flex !important;
-     margin: 230px auto 40px;
-     transform: translateZ(0);
-     animation-delay: -0.16s;
+    margin: 230px auto 40px;
+    transform: translateZ(0);
+    animation-delay: -0.16s;
  }
 
  .slick-list{
-     padding: 20px !important;
+    padding: 20px !important;
  }
  
  .preloader:after {
-     left: 20px;
+    left: 20px;
  }
  
- @keyframes animation {
-     0%,
-     80%,
-     100% {
-         box-shadow: 0 0 #f27b13;
-         height: 40px;
-     }
-     40% {
-         box-shadow: 0 -30px #f27b13;
-         height: 80px;
-     }
- }
+@keyframes animation {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 #f27b13;
+        height: 40px;
+    }
+    40% {
+        box-shadow: 0 -30px #f27b13;
+        height: 80px;
+    }
+}
 
 @media only screen and (max-device-width: 420px){
 
     .slider{
         margin: 0;
+        height: auto;
     }
 
     .slick-prev {
@@ -86,7 +77,7 @@
     .slick-list {
         padding: 0px !important;
     }
-    
+
     .slick-next {
         right: 30px;
     }
@@ -95,6 +86,5 @@
         font-size: 50px;
         color: white !important;
     }
-
 }
 
