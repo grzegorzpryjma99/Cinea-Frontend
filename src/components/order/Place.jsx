@@ -1,14 +1,13 @@
-import React, { useState , useEffect, useContext} from 'react';
+import React, { useState , useContext} from 'react';
 import Header from '../home/Header';
 import "../../style/order.css"
 import { ScreeningContext } from "../admin/AdminPanel"
 import { NavLink } from 'react-router-dom';
-import { Placeholder } from 'cloudinary-react';
 
 const Place = () =>  {
 
-    const { tickets, orderScreening, updateOrderPlaces, tablicaNormal, tablicaHalf, normal, half} = useContext(ScreeningContext);
-    const [counter, setCounter] = useState(tickets);
+    const { tickets, orderScreening, updateOrderPlaces} = useContext(ScreeningContext);
+    const [setCounter] = useState(tickets);
 
     const [currentData, setCurrendData] = useState([])
     const [limit, setLimit] = useState(tickets)
@@ -18,16 +17,17 @@ const Place = () =>  {
     var tab = orderScreening.room.places
     var zajete = orderScreening.zajeteMiejsca
 
+    
+
     const xd = () => {
       updateOrderPlaces(currentData);
-      
   }
+
     tab.forEach(function (item) {
       zajete.forEach(function (item2) {
       if(item.row === item2.place[0].row && item.place === item2.place[0].place){
         tablicaMiejsczajetych.push(item.id)
-      }       
-    })
+      }       })
     })
 
       const count = () => {
@@ -46,7 +46,6 @@ const Place = () =>  {
         }
    }
 
-
     return (
         <main>
         <Header/>
@@ -64,15 +63,7 @@ const Place = () =>  {
                     onChange={selectData.bind(this,place.id)}
                     disabled={tablicaMiejsczajetych.includes(place.id) ? true : false}
                     name="select-data"/>
-                    {/* {place.row + 'row'} {place.place + 'place'} */}
-              </div>
-                
-                        )}</div>
-
-        
-
-
-
+              </div>)}</div>
 
         <div className='legenda'>
           <div className='zajete'>Zajęte miejsce</div>
