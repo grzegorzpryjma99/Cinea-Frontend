@@ -1,17 +1,15 @@
 import React from 'react';
-
 import { NavLink } from 'react-router-dom'
-import "./MainPage.css"
-import plakat from './platak.svg'
+import "../../style/MainPage.css"
 import axios from 'axios'
 import { Component } from 'react';
+import {Image} from 'cloudinary-react';
 
 class ProposedFilms extends Component {
 
     constructor(props) {
         super(props);
     
-      //const {filmID} = useParams();
       this.state ={
         data: ""
       }
@@ -32,18 +30,13 @@ class ProposedFilms extends Component {
             return(
                 <NavLink to={`/film/${film.id}`}>  
                 <div key={film.id}>
-                    <div>{film.filmDetails.title}</div>
-                    <img src={plakat}></img>
+                    <Image cloudName="dhdzistwc" publicId={film.filmDetails.imageURL}/>
                 </div>
                 </NavLink>
             );
         })
            
-        //   console.log(filmList)
-        //console.log(this.state.data);
-        console.log(this.state.data) //
         return (
-          
             <div>
                 <h1 class='recomended'>Polecane</h1>
                 <div class='recomended-films'>

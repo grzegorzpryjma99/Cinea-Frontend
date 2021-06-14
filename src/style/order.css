@@ -1,0 +1,267 @@
+* {
+    font-style: normal;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cart-section{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 80vh;
+    background-color: white;
+    border-radius: 15px;
+    justify-content: center;
+    margin-top: 5vh;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.normal-ticket{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    background-color: #dddbdb;
+    border-radius: 10px;
+    height: 130px;
+    align-items: center;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.half-price-ticket{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 130px;
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.seats{
+    background-color: rgb(21, 226, 38);
+    width: 60px;
+    text-align: center;
+    height: 60px;
+}
+
+:checked {
+    background-color:yellow;
+}
+
+.taken-seats{
+    background-color: rgb(240, 76, 76);;
+    width: 60px;
+    text-align: center;
+    height: 60px;
+}
+
+.place-checkbox{
+    color: black;
+    width: 50px;
+    height: 50px;
+}
+
+.zajete{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(240, 76, 76);
+}
+
+.wybrane{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(33, 134, 250);
+}
+
+.wolne{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(21, 226, 38);
+}
+.sum-section{
+    height: 82vh;
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #dddbdb;
+    width: 60%;
+    height: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.order-button{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 5em;
+    background-color: #f27b13;
+    color: black;
+    border-radius: 10px;
+    border: 0;
+    width: 15vw;
+    height: 3em;
+    margin-right: auto;
+    margin-left: auto;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.place{
+    display: flex;
+    flex-direction: row;
+}
+
+.total-sum{
+    font-weight: bold;
+    font-size: 40px;
+}
+.cart-header{
+    text-align: center;
+    margin-top: 40px;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Cunia', sans-serif;
+    color: #494848;
+}
+
+.ticket-image{
+    height: 15vh;
+}
+
+.total{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+
+.screen{
+    margin: 50px;
+    color: white;
+    text-align: center;
+    background-color: black;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.places-in-room{
+    display: grid;
+  grid-template-columns: repeat(3, 0fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(60px, auto);
+  justify-content: center;
+}
+
+.legenda{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 320px;
+}
+
+.increment{
+    background-color: rgba(0, 0, 0, 0.25);
+    height: 37px;
+    width: 37px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.decrement{
+    background-color: rgba(0, 0, 0, 0.25);
+    height: 37px;
+    width: 37px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.ticket-input{
+    height: 31px;
+    width: 45px;
+    text-align: center;
+}
+
+@media only screen and (max-device-width: 420px){
+    
+    .order-button{
+        width: 60vw;
+        margin: 1em;
+    }
+
+    .normal-ticket{
+        width: 90%;
+        height: 110px;
+    }
+
+    .half-price-ticket{
+        width: 90%;
+        height: 110px;
+    }
+
+    .sum-section{
+        padding: 0;
+    }
+
+    .div-ticket-image{
+        display: none;
+    }
+
+    .ticket{
+        width: 95%;
+        font-size: 13px;
+    }
+
+    .place{
+        flex-direction: column;
+    }
+
+    .screen{
+        width: 90vw;
+    }
+
+    .cart-section{
+        width: 95vw;
+        height: 80vh;
+        font-size: 12px;
+    }
+
+    .total-sum{
+        font-size: 20px;
+    }
+
+    .total{
+        height: 15vh;
+        width: 90%;
+    }
+
+    .legenda{
+        margin: auto;
+    }
+}

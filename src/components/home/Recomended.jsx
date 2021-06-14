@@ -1,12 +1,11 @@
-import React, { useState, useEffect,setState,setLoading,setHasError } from 'react';
-import "./MainPage.css"
-import Film from '../filmpage/Film'
+import React from 'react';
+import "../../style/MainPage.css"
+import Film from '../../pages/Film'
 import { Switch, Route } from 'react-router-dom'
 import Slider from "./Slider";
 
 const Recomended = () =>  {
-
-
+    
     return (
         <Switch>
             <Route exact path='/main-page*' component={Slider}/>

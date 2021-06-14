@@ -1,11 +1,4 @@
-import {
-    SIGNIN, 
-    SIGNUP, 
-    SIGNIN_ERROR, 
-    SIGNUP_ERROR, 
-    SIGNUP_SUCCESS
-} from './../actions/types';
-
+const SIGNIN = 'SIGNIN';
 
 const initialState = {
     login: false,
@@ -20,26 +13,6 @@ const auth = (state = initialState, action) => {
             localStorage.setItem("user", JSON.stringify(action.payload));
             return {
                 ...state, auth: action.payload, login: true, login_error: false
-            }
-        case SIGNIN_ERROR:
-            return {
-                ...state, login_error: true,
-            }
-        case SIGNUP:
-            return {
-                ...state
-            }
-        case SIGNUP_ERROR:
-            return {
-                ...state, register_error: true
-            }
-        case SIGNUP_SUCCESS:
-            return {
-                ...state, register_error: false
-            }
-        case 'LOGOUT':
-            return {
-                ...state, login: false
             }
             default:
                 return state;

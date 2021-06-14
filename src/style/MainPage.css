@@ -1,0 +1,572 @@
+@import url('http://fonts.cdnfonts.com/css/cunia');
+
+*{
+    font-style: normal;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo{
+    margin-left: 0;
+}
+
+.login-register-buttons{
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2em;
+    margin: 0;
+}
+
+.gallery-btn{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.href-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.href-div>a{
+    margin-left: 1em;
+    font-weight: inherit;
+    font-size: 25px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Cunia', sans-serif;
+    color: #494848;
+}
+
+.gallery-div{
+    text-align: center;
+}
+
+.galery-image{
+    height: 500px;
+    width: 730px;
+    margin: 1em;
+}
+
+.galery-image-popup{
+    height: 400px;
+}
+
+​a:visited, a:link
+{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    transform: scale(1.05, 1.05);
+}
+
+.login-register-buttons>button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    height: 2em;
+    cursor: pointer;
+    font-size: 25px;
+    margin: 10px;
+    font-weight: inherit;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Cunia', sans-serif;
+    color: #494848;
+}
+
+.login-register-buttons-mobile>button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 27px;
+    text-transform: uppercase;
+    font-family: 'Cunia', sans-serif;
+    color: #494848;
+    margin: 10px;
+}
+
+.cinema-location{
+    align-items: center;
+}
+
+.recomended{
+    text-align: center;
+    padding: 0.5em;
+    font-size: 28px;
+}
+
+.recomended-films{
+    display: flex;
+    flex-direction: row;
+}
+
+.repertoire{
+    background-color: #C4C4C4;
+    height: 15em;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+.phone{
+    font-size: 20px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.the-film{
+    display: flex;
+    flex-direction: row;
+    padding: 3em;
+    height: 440px;
+    width: 70vw;
+}
+
+.about-us>p{
+    width: 25vw;
+}
+
+.social{
+    font-size: 30px;
+    margin: auto;
+    display: flow-root;
+    color: #494848;;
+}
+
+.social>a:visited{
+    color: #494848;;
+}
+
+.film-details{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    padding: 1em;
+    justify-content: center;
+}
+
+.time>button{
+    border: 0;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    height: 3em;
+    width: 8em;
+    margin: 1em;
+}
+
+.time>button:hover{
+   background-color: rgb(209, 203, 203);
+   border: 1px solid #f27b13;
+}
+
+.repertoire-buttons{
+    text-align: center;
+    padding: 2em;
+    justify-content: center;
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.selectionContainer{
+    margin: 5px;
+}
+
+.repertuar{
+    text-align: center;
+    padding: 0.5em;
+    font-size: 28px;
+}
+
+.repertoire-buttons>button{
+    border: 0;
+    background-color: transparent;
+    color: black;
+    font-size: 40px;
+    height: 2em;
+    width: 4em;
+    font-weight: bold;
+}
+
+.about-us > h1{
+    text-transform: uppercase;
+    font-family: 'Cunia', sans-serif;
+    color: #494848;
+}
+
+.about-us > p {
+    text-align: justify;
+}
+
+.contact > h1{
+    text-transform: uppercase;
+    font-family: 'Cunia', sans-serif;
+    color: #494848;
+}
+
+.short-description{
+    padding: 2em;
+    height: 64px;
+    overflow: clip;
+    width: 35vw;
+    text-align: justify;
+}
+
+.operation-buttons{
+    margin: auto;
+}
+
+.film-image{
+    width: 450px;
+    height: 550px;
+    box-shadow: 5px 5px 13px -2px rgba(0,0,0,0.75);
+}
+
+.film-image-slider{
+    width: 450px;
+    height: 550px;
+    box-shadow: 5px 5px 13px -2px rgba(0,0,0,0.75);
+}
+
+.film-image-slider:hover{
+    transform: scale(1.001, 1.001);
+}
+
+.screening-image{
+    width: 350px;
+    height: 427px;
+    box-shadow: 5px 5px 13px -2px rgba(0,0,0,0.75);
+}
+
+.operation-buttons>button{
+    background-color: #f27b13;
+    color: black;
+    border-radius: 10px;
+    border: 0;
+    width: 15vw;
+    height: 3em;
+}
+
+.c-or span {
+    position: relative;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-weight: inherit;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-family: 'Cunia', sans-serif;
+    color: #494848;
+}
+
+.c-or span::before, .c-or span::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    height: 1px;
+    display: block;
+    width: 1000px;
+}
+
+.c-or {
+    overflow: hidden;
+    margin: 50px auto 50px;
+    line-height: 1;
+    text-align: center;
+    width: 85vw;
+}
+
+.c-or span::before {
+    right: calc(100% + 20px);
+}
+
+.c-or span::after {
+    left: calc(100% + 20px);
+}
+
+.footer-div{
+    display: flex;
+}
+
+.about-us{
+    width: 33vw;
+    flex-direction: column;
+    display: flex;
+    padding: 1em;
+}
+
+.contact{
+    width: 33vw;
+    flex-direction: column;
+    display: flex;
+    padding: 1em;
+}
+
+.map{
+    width: 33vw;
+    flex-direction: column;
+    display: flex;
+    padding: 1em;
+}
+
+[type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+  }
+  [type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  
+  label {
+    display: block;
+  }
+
+.choose-date {
+border: 1px solid #c4c4c4;
+border-radius: 5px;
+background-color: #fff;
+padding: 3px 5px;
+box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+width: 190px;
+height: 45px;
+margin: 5px;
+}
+
+.order-button{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    background-color: #f27b13;
+    color: black;
+    border-radius: 10px;
+    border: 0;
+    width: 15vw;
+    height: 3em;
+    margin-right: auto;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.order-button:hover{
+    transform: scale(1.05, 1.05);
+}
+
+.monday{
+    height: 50px;
+    width: 80px;
+}
+
+.mapka{
+    height: 200px;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    padding: 1em;
+    overflow: auto;
+}
+
+.href-div-mobile{
+    display: flex;
+    margin-top: 0;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logo-mobile{
+    height: 70px;
+    margin-top: 10px;
+}
+
+.href-div-mobile > a{
+    text-transform: uppercase;
+    font-family: 'Cunia', sans-serif;
+    color: #494848;
+    font-size: 27px;
+    margin: 10px;
+}
+
+.hamburger-react{
+    display: none;
+}
+
+.login-register-buttons-mobile{
+    display: none;
+    cursor: pointer; 
+}
+
+.repertoire-info{
+    text-align: center;
+    margin: 10vh;
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-family: 'Cunia', sans-serif;
+    color: #494848;
+    margin-bottom: 15vh;
+    opacity: 80%;
+}
+
+@media only screen and (max-device-width: 420px){
+
+    .logo{
+        height: 60px;
+        margin-left: 0;
+        margin: auto;
+        width: 270px;
+    }
+
+    .film-image-slider{
+        width: 90vw;
+        height: auto;
+    }
+
+    .href-div{
+        display: none;
+    }
+
+    .login-register-buttons{
+        display: none;
+    }
+
+    .galery-image{
+        height: 220px;
+        width: 330px;
+    }
+
+    .about-us > p {
+        width: auto;
+        text-align: justify;
+    }
+
+    .contact{
+        width: 90vw;
+    }
+
+    @keyframes showNav {
+        from {height: 0;}
+        to {height: 1;}
+      }
+
+    .login-register-buttons-mobile{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height: 63vh;
+        width: 100%;
+        background-color:#C4C4C4;
+        justify-content: center;
+        animation: showNav 350ms linear;
+        border-bottom: 0.5px solid #494848;;
+    }
+
+    .repertoire-buttons{
+        width: 100%;
+        padding: 0;
+    }
+
+    .repertoire {
+        background-color: #C4C4C4;
+        height: 8em;
+        padding: 1em;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .repertuar {
+        text-align: center;
+        padding: 0.5em;
+        font-size: 28px;
+        margin: 0;
+    }
+
+    .the-film {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5em;
+        height: auto;
+        width: auto;
+        
+    }
+
+    .screening-image {
+        width: 290px;
+        height: 354px;
+        box-shadow: 5px 5px 13px -2px rgb(0 0 0 / 75%);
+    }
+
+    .film-details>h1{
+        font-size: 20px;
+    }
+
+    .short-description {
+        display: none;
+    }
+
+    .order-button{
+        width: 60vw;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footerr{
+        flex-direction: column;
+    }
+
+    .map{
+        width: 80vw;
+    }
+
+    .about-us{
+        width: 90vw;
+    }
+
+    .slider{
+        margin: 0;
+    }
+
+    .hamburger-react{
+        display: flex;
+        align-self: center;
+    }
+
+    .footer-div{
+        flex-direction: column;
+    }
+
+    .c-or{
+        margin: 50px auto 10px;
+    }
+}
+
+
